@@ -24,7 +24,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-[#FAFBFF]">
       <Container>
         <FadeInUp>
           <h2 className="text-center text-2xl font-black tracking-tight">

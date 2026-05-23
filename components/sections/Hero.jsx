@@ -21,7 +21,7 @@ export default function Hero() {
           <FadeInUp>
             <div>
               <h1 className="text-4xl lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
-                We build software that businesses can{" "}
+                We build softwares that businesses can{" "}
                 <Typewriter 
                   texts={["actually grow with.", "scale with.", "trust.", "love."]}
                   delay={120}

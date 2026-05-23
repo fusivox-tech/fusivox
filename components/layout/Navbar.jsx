@@ -77,11 +77,11 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     className={`
-                      relative px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300
+                      relative px-5 py-2.5 text-[15px] font-medium transition-all duration-300
                       ${
                         isActive
-                          ? "bg-[#0B1020] text-white shadow-lg shadow-black/10"
-                          : "text-black/60 hover:text-black hover:bg-black/[0.04]"
+                          ? "text-black border-b-2 border-[#5B5CF0]"
+                          : "text-black/60 hover:text-black"
                       }
                     `}
                   >
