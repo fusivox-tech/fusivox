@@ -11,7 +11,7 @@ const services = [
   {
     title: "Web Applications",
     subtitle: "For businesses that need more than a normal website.",
-    idealFor: ["Customer portals", "Dashboards", "Booking platforms", "Business systems"],
+    idealFor: ["Customer portals", "Dashboards", "Booking platforms", "E-Commerce Store"],
     solutions: [
       "Authentication & user management",
       "Payment integration",
