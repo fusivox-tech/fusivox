@@ -1,52 +1,43 @@
+"use client";
+
 import Container from "../ui/Container";
 import { ArrowRight } from "lucide-react";
+import { FadeInUp } from "../ui/ScrollAnimation";
+
+const whatsappUrl = (message) => {
+  return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
+};
 
 export default function CTASection() {
+  const handleWhatsAppClick = () => {
+    window.open(whatsappUrl("Hi! I'm ready to start my project. Let's talk!"), '_blank');
+  };
+
   return (
-    <section className="py-24">
+    <section className="py-24 bg-gradient-to-br from-[#0B1020] to-[#1a1f35]">
       <Container>
-        <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-[#5B21B6] via-[#5B5CF0] to-[#2563EB] p-10 lg:p-16">
-          {/* glow effects */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px] rounded-full bg-pink-500/30 blur-3xl" />
-
-            <div className="absolute bottom-[-120px] right-[-60px] w-[340px] h-[340px] rounded-full bg-cyan-400/30 blur-3xl" />
-          </div>
-
-          {/* floating lines */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-20 w-40 h-px bg-white rotate-12" />
-            <div className="absolute bottom-20 right-20 w-52 h-px bg-white -rotate-12" />
-          </div>
-
-          <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
-            <div className="max-w-2xl">
-              <p className="uppercase tracking-[0.2em] text-white/70 text-sm font-bold">
-                Ready to build something great?
-              </p>
-
-              <h2 className="mt-5 text-3xl lg:text-4xl font-black text-white leading-[1.05] tracking-tight">
-                Let’s build something solid.
-              </h2>
-
-              <p className="mt-7 text-md text-white/80 leading-6 max-w-xl">
-                Whether you need a website, SaaS platform, internal business
-                system, or mobile app, Fusivox can help you build it properly
-                from the start.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-5">
-              <button className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
-                Start a Project 
-                <ArrowRight className="w-5 h-5" />
-              </button>
-
-              <p className="text-white/70 text-sm text-center">
-                Usually replies within 24 hours
-              </p>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <FadeInUp>
+            <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">
+              Ready to build something great?
+            </h2>
+            
+            <p className="mt-6 text-white/60 text-lg max-w-2xl mx-auto">
+              Let's discuss your project and turn your ideas into reality.
+            </p>
+            
+            <button 
+              onClick={handleWhatsAppClick}
+              className="mt-10 h-14 px-8 rounded-2xl bg-[#5B5CF0] text-white flex items-center gap-5 font-semibold shadow-xl shadow-indigo-500/30 hover:scale-105 transition-transform mx-auto"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 text-white" />
+            </button>
+            
+            <p className="mt-6 text-white/40 text-sm">
+              Or reach us directly on WhatsApp +234 810 944 8643
+            </p>
+          </FadeInUp>
         </div>
       </Container>
     </section>

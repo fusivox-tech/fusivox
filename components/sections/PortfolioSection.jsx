@@ -26,7 +26,7 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section className="py-24">
+    <section id="portfolio" className="py-24">
       <Container>
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div>

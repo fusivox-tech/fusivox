@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Rocket,
   Building2,
@@ -5,8 +7,8 @@ import {
   Briefcase,
   Cog,
 } from "lucide-react";
-
 import Container from "../ui/Container";
+import { FadeInUp, StaggerChildren } from "../ui/ScrollAnimation";
 
 const items = [
   {
@@ -40,18 +42,20 @@ export default function TrustedSection() {
   return (
     <section className="py-24 bg-[#FAFBFF]">
       <Container>
-        <h2 className="text-center text-2xl font-black tracking-tight">
-          We build for businesses that are serious about growth.
-        </h2>
+        <FadeInUp>
+          <h2 className="text-center text-2xl font-black tracking-tight">
+            We build for businesses that are serious about growth.
+          </h2>
+        </FadeInUp>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+        <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
           {items.map((item) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.title}
-                className="bg-white rounded-3xl p-8 border border-black/5 shadow-sm"
+                className="bg-white rounded-3xl p-8 border border-black/5 shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center">
                   <Icon className="text-[#5B5CF0]" />
@@ -67,7 +71,7 @@ export default function TrustedSection() {
               </div>
             );
           })}
-        </div>
+        </StaggerChildren>
       </Container>
     </section>
   );

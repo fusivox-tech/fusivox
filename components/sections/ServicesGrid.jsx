@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { FadeInUp, StaggerChildren } from "../ui/ScrollAnimation";
 
 const services = [
   {
@@ -19,15 +20,19 @@ const services = [
   },
 ];
 
+"use client";
+
 export default function ServicesGrid() {
   return (
     <section className="py-24">
       <Container>
-        <h2 className="text-center text-2xl font-black tracking-tight">
-          What we help businesses build.
-        </h2>
+        <FadeInUp>
+          <h2 className="text-center text-2xl font-black tracking-tight">
+            What we help businesses build.
+          </h2>
+        </FadeInUp>
 
-        <div className="grid lg:grid-cols-4 gap-8 mt-16">
+        <StaggerChildren className="grid lg:grid-cols-4 gap-8 mt-16">
           {services.map((service) => (
             <div
               key={service.title}
@@ -50,7 +55,7 @@ export default function ServicesGrid() {
               </div>
             </div>
           ))}
-        </div>
+           </StaggerChildren>
       </Container>
     </section>
   );
