@@ -73,7 +73,7 @@ export default function PricingPage() {
       <Navbar />
       <main className="bg-white text-[#0B1020]">
         {/* Hero Section */}
-        <section className="pt-24 md:pt-32 pb-12 md:pb-16">
+        <section className="pt-12 pb-12 md:pb-16">
           <Container>
             <FadeInUp>
               <div className="max-w-3xl mx-auto text-center">
