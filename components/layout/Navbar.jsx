@@ -6,6 +6,10 @@ import { usePathname } from "next/navigation";
 import Container from "../ui/Container";
 import { ArrowRight, X } from "lucide-react";
 
+const whatsappUrl = (message) => {
+  return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
+};
+
 const links = [
   {
     name: "Home",
@@ -57,6 +61,10 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  const handleWhatsAppClick = () => {
+    window.open(whatsappUrl("Hi! I'm ready to start my project. Let's talk!"), '_blank');
+  };
 
   return (
     <>
@@ -92,7 +100,7 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA Button */}
-            <button className="hidden lg:flex h-11 px-6 rounded-xl bg-[#0B1020] text-white text-sm items-center gap-5 font-semibold shadow-lg shadow-black/10 hover:scale-[1.02] transition">
+            <button onClick={() => handleWhatsAppClick()} className="hidden lg:flex h-11 px-6 rounded-xl bg-[#0B1020] text-white text-sm items-center gap-5 font-semibold shadow-lg shadow-black/10 hover:scale-[1.02] transition">
               Start a Project
               <ArrowRight className="h-5 w-5" />
             </button>
@@ -182,6 +190,7 @@ export default function Navbar() {
                 }}
               >
                 <button
+                  onClick={() => handleWhatsAppClick()}
                   className={`
                     w-full h-12 px-6 rounded-xl bg-[#0B1020] text-white text-sm
                     flex items-center justify-center gap-5 font-semibold
