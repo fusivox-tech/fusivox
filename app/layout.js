@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        
       </head>
       <body className={font.className}>
         {children}
