@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { ArrowRight } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -24,11 +25,11 @@ export default function CTASection() {
                 Ready to build something great?
               </p>
 
-              <h2 className="mt-5 text-5xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight">
+              <h2 className="mt-5 text-3xl lg:text-4xl font-black text-white leading-[1.05] tracking-tight">
                 Let’s build something solid.
               </h2>
 
-              <p className="mt-8 text-lg text-white/80 leading-8 max-w-xl">
+              <p className="mt-7 text-md text-white/80 leading-6 max-w-xl">
                 Whether you need a website, SaaS platform, internal business
                 system, or mobile app, Fusivox can help you build it properly
                 from the start.
@@ -36,8 +37,9 @@ export default function CTASection() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <button className="h-16 px-10 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
-                Start a Project →
+              <button className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
+                Start a Project 
+                <ArrowRight className="w-5 h-5" />
               </button>
 
               <p className="text-white/70 text-sm text-center">

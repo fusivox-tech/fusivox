@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -33,13 +34,14 @@ export default function PortfolioSection() {
               Selected Work
             </p>
 
-            <h2 className="text-5xl font-black mt-4 tracking-tight">
+            <h2 className="text-3xl font-black mt-4 tracking-tight">
               A few things we’ve built.
             </h2>
           </div>
 
           <button className="text-[#5B5CF0] font-bold text-lg">
-            View all projects →
+            View all projects 
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
 
@@ -84,11 +86,11 @@ export default function PortfolioSection() {
               </div>
 
               <div className="p-8">
-                <h3 className="text-2xl font-black tracking-tight">
+                <h3 className="text-md font-black tracking-tight">
                   {project.title}
                 </h3>
 
-                <p className="mt-4 text-black/60 leading-7">
+                <p className="mt-4 text-xs text-black/60 leading-6">
                   {project.description}
                 </p>
 
@@ -96,7 +98,7 @@ export default function PortfolioSection() {
                   {project.tech.map((item) => (
                     <div
                       key={item}
-                      className="px-4 py-2 rounded-full bg-[#F4F6FB] text-sm font-semibold text-black/70"
+                      className="px-3 py-1 rounded-full bg-[#F4F6FB] text-xs font-semibold text-black/70"
                     >
                       {item}
                     </div>

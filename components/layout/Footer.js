@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,8 +8,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-16">
           <div>
             <div className="text-3xl font-black">
-              <span className="text-[#5B5CF0]">FUSI</span>
-              VOX
+              <img src="/wordmark.png" className="h-8" alt="" />
             </div>
 
             <p className="mt-6 text-white/60 leading-7">
@@ -47,7 +47,8 @@ export default function Footer() {
             </h3>
 
             <button className="mt-8 h-12 px-6 rounded-xl bg-[#5B5CF0] font-semibold">
-              Start a Project →
+              Start a Project
+              <ArrowRight className="w-5 h-5" />
             </button>
           </div>
         </div>

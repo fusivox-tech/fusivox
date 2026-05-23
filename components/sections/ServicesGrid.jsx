@@ -7,15 +7,15 @@ const services = [
   },
   {
     title: "Web Applications",
-    items: ["Dashboards", "Admin systems", "SaaS platforms"],
+    items: ["Dashboards", "E-Commerce Stores", "SaaS platforms"],
   },
   {
     title: "Mobile Apps",
-    items: ["iOS & Android apps", "Cross-platform apps"],
+    items: ["iOS Apps", "Android Apps", "Cross-Platform Codebase"],
   },
   {
     title: "Internal Tools",
-    items: ["Booking systems", "Automation tools"],
+    items: ["Booking systems", "Automation tools", "CRM System"],
   },
 ];
 

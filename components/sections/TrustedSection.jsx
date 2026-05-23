@@ -31,7 +31,7 @@ const items = [
   },
   {
     icon: Cog,
-    title: "Internal Systems",
+    title: "Corporations",
     text: "Streamline operations and workflows.",
   },
 ];
@@ -41,7 +41,7 @@ export default function TrustedSection() {
     <section className="py-24 bg-[#FAFBFF]">
       <Container>
         <h2 className="text-center text-4xl font-black tracking-tight">
-          Built for businesses that are serious about growth.
+          We build for businesses that are serious about growth.
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
@@ -57,11 +57,11 @@ export default function TrustedSection() {
                   <Icon className="text-[#5B5CF0]" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">
+                <h3 className="mt-6 text-md font-bold">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-black/60 leading-7">
+                <p className="mt-3 text-sm text-black/60 leading-7">
                   {item.text}
                 </p>
               </div>

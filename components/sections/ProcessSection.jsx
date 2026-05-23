@@ -40,11 +40,11 @@ export default function ProcessSection() {
               Our Process
             </p>
 
-            <h2 className="text-5xl font-black leading-tight mt-5 tracking-tight">
+            <h2 className="text-3xl font-black leading-tight mt-5 tracking-tight">
               How projects move from idea to launch.
             </h2>
 
-            <p className="mt-8 text-black/60 leading-8 text-lg">
+            <p className="mt-6 text-black/60 leading-7 text-md">
               Every project follows a structured process focused on clarity,
               speed, communication, and scalable execution.
             </p>
@@ -59,16 +59,16 @@ export default function ProcessSection() {
                   key={step.number}
                   className="relative flex gap-8"
                 >
-                  <div className="relative z-10 min-w-[64px] h-16 rounded-2xl bg-white border border-black/5 shadow-sm flex items-center justify-center text-[#5B5CF0] font-black text-xl">
+                  <div className="relative z-10 min-w-[64px] h-16 rounded-2xl bg-white border border-black/5 shadow-sm flex items-center justify-center text-[#5B5CF0] font-black text-md">
                     {step.number}
                   </div>
 
                   <div className="bg-white border border-black/5 rounded-[28px] p-8 shadow-sm flex-1">
-                    <h3 className="text-2xl font-black tracking-tight">
+                    <h3 className="text-lg font-black tracking-tight">
                       {step.title}
                     </h3>
 
-                    <p className="mt-4 text-black/60 leading-7">
+                    <p className="mt-4 text-sm text-black/60 leading-7">
                       {step.description}
                     </p>
 
