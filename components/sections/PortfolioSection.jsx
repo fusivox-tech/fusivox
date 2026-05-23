@@ -6,15 +6,6 @@ import { ArrowRight, Eye } from "lucide-react";
 
 const projects = [
   {
-    title: "BullFaucet",
-    category: "Enterprise Grade Crypto Platform",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779565512/file_000000003774720ab51c8a23b5a2a847_kbev0j.png",
-    description: "Enterprise-grade crypto reward platform with multi-chain support, advanced user authentication, and automated cryptocurrency deposits across Solana, BSC, and Bitcoin blockchains.",
-    tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
-    liveLink: "https://www.bullfaucet.com",
-    gradient: "from-blue-600 to-indigo-600"
-  },
-  {
     title: "Zoommia",
     category: "Multi-Vendor E-Commerce",
     image: "https://res.cloudinary.com/danuehpic/image/upload/v1778558276/file_00000000340c720a9d31fa71f0879c2d_uzcdr0.png",
@@ -22,6 +13,15 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
     liveLink: "https://zoomia.fusivox.com.ng",
     gradient: "from-purple-600 to-pink-600"
+  },
+  {
+    title: "BullFaucet",
+    category: "Enterprise Grade Crypto Platform",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779573774/file_00000000cb5071f4bfe973b6cf6e1ebc_r4bbo1.png",
+    description: "Enterprise-grade crypto reward platform with multi-chain support, advanced user authentication, and automated cryptocurrency deposits across Solana, BSC, and Bitcoin blockchains.",
+    tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
+    liveLink: "https://www.bullfaucet.com",
+    gradient: "from-blue-600 to-indigo-600"
   },
   {
     title: "Ges Vis Studios",

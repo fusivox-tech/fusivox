@@ -11,17 +11,6 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "BullFaucet",
-    category: "Enterprise Grade Crypto Platform",
-    image: 'https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779565512/file_000000003774720ab51c8a23b5a2a847_kbev0j.png',
-    problem: "A crypto startup needed an enterprise-grade reward and advertising platform that integrates with multiple third-party tasks and reward APIs.",
-    solution: "Built a fully customized solution consisting of a user-facing reward web app with advanced user authentication (email, password, 2FA, Google OAuth). Integrated 8 third-party task and reward APIs, automated cryptocurrency deposit and transfer via Solana, BSC, and Bitcoin blockchains. Also built a robust admin panel with a detailed dashboard and user management system with real-time email and push notification system.",
-    outcome: "Helped the company launch their project in record time and provided ongoing support for 6 months.",
-    tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
-    liveLink: "https://www.bullfaucet.com",
-    gradient: "from-blue-600 to-indigo-600"
-  },
-  {
     title: "Zoommia",
     category: "Multi-Vendor E-Commerce Platform",
     image: "https://res.cloudinary.com/danuehpic/image/upload/v1778558276/file_00000000340c720a9d31fa71f0879c2d_uzcdr0.png",
@@ -42,6 +31,17 @@ const projects = [
     tech: ["Next.js", "Tailwind", "Cloudinary", "Vercel"],
     liveLink: "https://gesvisstudios.com",
     gradient: "from-green-600 to-emerald-600"
+  },
+  {
+    title: "BullFaucet",
+    category: "Enterprise Grade Crypto Platform",
+    image: 'https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779573774/file_00000000cb5071f4bfe973b6cf6e1ebc_r4bbo1.png',
+    problem: "A crypto startup needed an enterprise-grade reward and advertising platform that integrates with multiple third-party tasks and reward APIs.",
+    solution: "Built a fully customized solution consisting of a user-facing reward web app with advanced user authentication (email, password, 2FA, Google OAuth). Integrated 8 third-party task and reward APIs, automated cryptocurrency deposit and transfer via Solana, BSC, and Bitcoin blockchains. Also built a robust admin panel with a detailed dashboard and user management system with real-time email and push notification system.",
+    outcome: "Helped the company launch their project in record time and provided ongoing support for 6 months.",
+    tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
+    liveLink: "https://www.bullfaucet.com",
+    gradient: "from-blue-600 to-indigo-600"
   },
   {
     title: "MobileNative",
