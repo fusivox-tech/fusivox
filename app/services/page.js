@@ -76,7 +76,7 @@ export default function ServicesPage() {
       <Navbar />
       <main className="bg-white text-[#0B1020]">
         {/* Hero Section */}
-        <section className="pt-12 pb-12 md:pb-20">
+        <section className="pt-8 pb-12 md:pb-20">
           <Container>
             <FadeInUp>
               <div className="max-w-3xl">

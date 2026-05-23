@@ -10,47 +10,50 @@ import { ArrowRight, Check, HelpCircle } from "lucide-react";
 const pricingTiers = [
   {
     name: "Business Websites",
-    startingFrom: "₦450,000",
+    startingFrom: "₦150,000",
     description: "For businesses that need a professional online presence.",
     idealFor: "Small to medium businesses, brands, portfolios",
     includes: [
       "Custom design",
-      "Responsive layout",
+      "5 Pages",
       "Contact forms",
       "Basic SEO setup",
       "Analytics integration",
-      "3 months support"
+      "2 weeks support"
     ],
     gradient: "from-blue-50 to-indigo-50"
   },
   {
     name: "Web Applications",
-    startingFrom: "₦1,500,000",
+    startingFrom: "₦350,000",
     description: "For businesses that need more than a normal website.",
-    idealFor: "Dashboards, customer portals, booking platforms",
+    idealFor: "Dashboards, E-Commerce Store, booking platforms",
     includes: [
       "User authentication",
+      "10 Pages",
       "Database integration",
       "Admin panel",
       "API development",
       "Payment integration",
-      "6 months support"
+      "2 months support"
     ],
     gradient: "from-purple-50 to-pink-50",
     popular: true
   },
   {
     name: "Mobile Apps",
-    startingFrom: "₦2,500,000",
+    startingFrom: "₦600,000",
     description: "Native mobile experiences for iOS and Android.",
     idealFor: "iOS apps, Android apps, cross-platform solutions",
     includes: [
       "Native performance",
+      "8 Screens",
       "Push notifications",
+      "Admin Panel",
       "Offline support",
       "App store deployment",
       "Analytics",
-      "6 months support"
+      "2 months support"
     ],
     gradient: "from-green-50 to-emerald-50"
   }
@@ -73,7 +76,7 @@ export default function PricingPage() {
       <Navbar />
       <main className="bg-white text-[#0B1020]">
         {/* Hero Section */}
-        <section className="pt-12 pb-12 md:pb-16">
+        <section className="pt-8 pb-12 md:pb-16">
           <Container>
             <FadeInUp>
               <div className="max-w-3xl mx-auto text-center">
@@ -107,8 +110,6 @@ export default function PricingPage() {
                       Most Popular
                     </div>
                   )}
-                  
-                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br ${tier.gradient} mb-4 md:mb-6`} />
                   
                   <h3 className="text-xl md:text-2xl font-black">{tier.name}</h3>
                   <div className="mt-3 md:mt-4">

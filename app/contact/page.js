@@ -35,7 +35,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="bg-white text-[#0B1020]">
         {/* Hero Section */}
-        <section className="pt-12 pb-12 md:pb-16">
+        <section className="pt-8 pb-12 md:pb-16">
           <Container>
             <FadeInUp>
               <div className="max-w-3xl mx-auto text-center">
@@ -167,7 +167,7 @@ export default function ContactPage() {
                 <div className="grid md:grid-cols-3 gap-5 md:gap-6 text-center">
                   <div>
                     <Mail className="w-5 h-5 text-[#5B5CF0] mx-auto mb-2" />
-                    <p className="text-xs md:text-sm text-black/60">hello@fusivox.com</p>
+                    <p className="text-xs md:text-sm text-black/60">fusivox@gmail.com</p>
                   </div>
                   <div>
                     <Phone className="w-5 h-5 text-[#5B5CF0] mx-auto mb-2" />
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <MapPin className="w-5 h-5 text-[#5B5CF0] mx-auto mb-2" />
-                    <p className="text-xs md:text-sm text-black/60">Lagos, Nigeria</p>
+                    <p className="text-xs md:text-sm text-black/60">Ogun State, Nigeria</p>
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
               {[
                 {
                   q: "How long does a typical project take?",
-                  a: "A business website typically takes 2-4 weeks. Web applications and mobile apps take 2-4 months depending on complexity."
+                  a: "A business website typically takes 1-2 weeks. Web applications and mobile apps take 2 weeks to 2 months depending on complexity."
                 },
                 {
                   q: "Do you offer maintenance after launch?",
