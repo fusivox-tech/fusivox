@@ -1,7 +1,16 @@
+"use client";
+
 import Container from "../ui/Container";
 import { ArrowRight } from "lucide-react";
 
+const whatsappUrl = (message) => {
+  return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
+};
+
 export default function CTASection() {
+  const handleWhatsAppClick = () => {
+    window.open(whatsappUrl("Hi! I'm ready to start my project. Let's talk!"), '_blank');
+  };
   
   return (
     <section className="py-24">
@@ -38,7 +47,7 @@ export default function CTASection() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <button className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
+              <button onClick={() => handleWhatsAppClick()} className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
                 Start a Project 
                 <ArrowRight className="w-5 h-5" />
               </button>

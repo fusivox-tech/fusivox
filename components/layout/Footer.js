@@ -1,7 +1,17 @@
+"use client";
+
 import Container from "../ui/Container";
 import { ArrowRight } from "lucide-react";
 
+const whatsappUrl = (message) => {
+  return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
+};
+
 export default function Footer() {
+  const handleWhatsAppClick = () => {
+    window.open(whatsappUrl("Hi! I'm ready to start my project. Let's talk!"), '_blank');
+  };
+  
   return (
     <footer className="bg-[#07101F] text-white pt-24 pb-10">
       <Container>
@@ -46,7 +56,7 @@ export default function Footer() {
               Let’s build something great
             </h3>
 
-            <button className="mt-8 h-12 px-6 flex items-center gap-5 rounded-xl bg-[#5B5CF0] font-semibold">
+            <button onClick={() => handleWhatsAppClick()} className="mt-8 h-12 px-6 flex items-center gap-5 rounded-xl bg-[#5B5CF0] font-semibold">
               Start a Project
               <ArrowRight className="w-5 h-5" />
             </button>
