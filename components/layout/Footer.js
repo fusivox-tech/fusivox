@@ -2,6 +2,7 @@
 
 import Container from "../ui/Container";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const whatsappUrl = (message) => {
   return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
@@ -33,9 +34,9 @@ export default function Footer() {
             </h3>
 
             <div className="mt-6 text-sm space-y-4 text-white/60">
-              <p>Websites</p>
-              <p>Web Applications</p>
-              <p>Mobile Apps</p>
+              <Link href="/services">Websites</Link>
+              <Link href="/services">Web Applications</Link>
+              <Link href="/services">Mobile Apps</Link>
             </div>
           </div>
 
@@ -45,9 +46,9 @@ export default function Footer() {
             </h3>
 
             <div className="mt-6 text-sm space-y-4 text-white/60">
-              <p>About</p>
-              <p>Portfolio</p>
-              <p>Pricing</p>
+              <Link href="/about">About</Link>
+              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/pricing">Pricing</Link>
             </div>
           </div>
 
@@ -67,8 +68,8 @@ export default function Footer() {
           <p>© 2026 Fusivox. All rights reserved.</p>
 
           <div className="flex gap-8">
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
           </div>
         </div>
       </Container>

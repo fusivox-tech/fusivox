@@ -73,7 +73,7 @@ const projects = [
     solution: "Built a state-of-the-art e-commerce platform with advanced product feeds, order tracking, payment system integration, and a robust admin panel for complete inventory and order management.",
     outcome: "The business gained better visibility into their inventory operations and achieved a wider client reach, resulting in increased sales and operational efficiency.",
     tech: ["Next.js", "MongoDB", "Cloudinary", "Google Analytics", "Tailwind"],
-    liveLink: "https://slavy-two.vercel.app",
+    liveLink: "https://salvy-two.vercel.app",
     gradient: "from-rose-600 to-pink-600"
   }
 ];
