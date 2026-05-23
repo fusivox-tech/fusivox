@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden">
+    <section className="relative pt-10 pb-10 overflow-hidden">
       <Container>
-        <div className="grid lg:grid-cols-2 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-0 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
               We build software that businesses can{" "}
@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center justify-center flex-1">
-            <img src="/hero-image.svg" className="w-full h-auto" alt="" />
+            <img src="/hero-image.svg" className="w-full h-auto transform scale-110 md:scale-100" alt="" />
           </div>
         </div>
       </Container>

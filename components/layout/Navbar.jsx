@@ -160,8 +160,8 @@ export default function Navbar() {
                         }
                         ${
                           isActive
-                            ? "bg-[#0B1020] text-white shadow-lg shadow-black/10"
-                            : "text-black/60 hover:text-black hover:bg-black/[0.04]"
+                            ? "bg-[#0b10201e] text-black"
+                            : "text-black/60 hover:text-black"
                         }
                       `}
                       style={{
@@ -176,7 +176,7 @@ export default function Navbar() {
 
               {/* Mobile CTA Button */}
               <div
-                className="mt-8 px-6"
+                className="mt-10 w-full"
                 style={{
                   transitionDelay: `${links.length * 50}ms`,
                 }}
