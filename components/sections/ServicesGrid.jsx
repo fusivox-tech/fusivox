@@ -23,7 +23,7 @@ export default function ServicesGrid() {
   return (
     <section className="py-24">
       <Container>
-        <h2 className="text-center text-5xl font-black tracking-tight">
+        <h2 className="text-center text-2xl font-black tracking-tight">
           What we help businesses build.
         </h2>
 

@@ -34,12 +34,12 @@ export default function PortfolioSection() {
               Selected Work
             </p>
 
-            <h2 className="text-3xl font-black mt-4 tracking-tight">
+            <h2 className="text-2xl font-black mt-4 tracking-tight">
               A few things we’ve built.
             </h2>
           </div>
 
-          <button className="text-[#5B5CF0] font-bold text-lg">
+          <button className="text-[#5B5CF0] flex items-center gap-5 font-bold text-lg">
             View all projects 
             <ArrowRight className="w-5 h-5" />
           </button>

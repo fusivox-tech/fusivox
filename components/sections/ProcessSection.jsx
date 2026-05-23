@@ -40,7 +40,7 @@ export default function ProcessSection() {
               Our Process
             </p>
 
-            <h2 className="text-3xl font-black leading-tight mt-5 tracking-tight">
+            <h2 className="text-2xl font-black leading-tight mt-5 tracking-tight">
               How projects move from idea to launch.
             </h2>
 

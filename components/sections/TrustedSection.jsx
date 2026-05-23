@@ -40,7 +40,7 @@ export default function TrustedSection() {
   return (
     <section className="py-24 bg-[#FAFBFF]">
       <Container>
-        <h2 className="text-center text-4xl font-black tracking-tight">
+        <h2 className="text-center text-2xl font-black tracking-tight">
           We build for businesses that are serious about growth.
         </h2>
 

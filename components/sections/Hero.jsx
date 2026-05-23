@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative pt-20 pb-24 overflow-hidden">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
               We build software that businesses can{" "}
@@ -27,13 +27,15 @@ export default function Hero() {
 
               <button className="h-14 px-8 flex items-center gap-5 rounded-2xl border border-black/10 font-semibold hover:bg-black/[0.03] transition">
                 See Our Work 
-                <ArrowRight className="w-5 h-5 text-white" />
+                <ArrowRight className="w-5 h-5 text-black" />
               </button>
             </div>
 
           </div>
 
-          <HeroVisual />
+          <div className="flex items-center justify-center flex-1">
+            <img src="/hero-image.svg" className="w-full h-auto" alt="" />
+          </div>
         </div>
       </Container>
     </section>
