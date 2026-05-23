@@ -18,21 +18,21 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-16">
           <div>
             <div className="text-3xl font-black">
-              <img src="/wordmark.svg" className="h-8" alt="" />
+              <img src="/wordmark.svg" className="h-7" alt="" />
             </div>
 
-            <p className="mt-6 text-white/60 leading-7">
+            <p className="mt-6 text-sm text-white/60 leading-7">
               We build modern software products designed for
               growth-focused businesses.
             </p>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg">
+            <h3 className="font-bold text-md">
               Services
             </h3>
 
-            <div className="mt-6 space-y-4 text-white/60">
+            <div className="mt-6 text-sm space-y-4 text-white/60">
               <p>Websites</p>
               <p>Web Applications</p>
               <p>Mobile Apps</p>
@@ -40,11 +40,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg">
+            <h3 className="font-bold text-md">
               Company
             </h3>
 
-            <div className="mt-6 space-y-4 text-white/60">
+            <div className="mt-6 text-sm space-y-4 text-white/60">
               <p>About</p>
               <p>Portfolio</p>
               <p>Pricing</p>
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg">
+            <h3 className="font-bold text-md">
               Let’s build something great
             </h3>
 
