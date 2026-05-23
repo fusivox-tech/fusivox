@@ -27,3 +27,7 @@ button {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+img, video, iframe {
+  content-visibility: auto;
+}
