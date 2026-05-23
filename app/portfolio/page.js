@@ -199,7 +199,7 @@ export default function PortfolioPage() {
                       onClick={() => setSelectedProject(project)}
                       className="mt-4 w-full py-2 text-center text-sm font-semibold text-[#5B5CF0] hover:bg-indigo-50 rounded-xl transition-colors"
                     >
-                      View Case Study →
+                      View Case Study
                     </button>
                   </div>
                 </div>
@@ -287,7 +287,7 @@ export default function PortfolioPage() {
                       }}
                       className="w-full py-3 bg-[#0B1020] text-white rounded-xl font-semibold hover:bg-[#1a1f35] transition-colors"
                     >
-                      Start a similar project →
+                      Start a similar project
                     </button>
                   </div>
                 </div>

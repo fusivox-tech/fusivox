@@ -36,7 +36,7 @@ export default function ServicesGrid() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="rounded-3xl border border-black/5 p-8 hover:shadow-xl transition"
+              className="rounded-3xl bg-white border border-black/5 p-8 hover:shadow-xl transition"
             >
               <h3 className="text-2xl font-black">
                 {service.title}
