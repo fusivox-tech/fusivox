@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "../ui/Container";
 import { FadeInUp, StaggerChildren } from "../ui/ScrollAnimation";
 
@@ -19,8 +21,6 @@ const services = [
     items: ["Booking systems", "Automation tools", "CRM System"],
   },
 ];
-
-"use client";
 
 export default function ServicesGrid() {
   return (
