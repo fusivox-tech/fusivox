@@ -33,7 +33,7 @@ export default function Footer() {
               Services
             </h3>
 
-            <div className="mt-6 text-sm space-y-4 text-white/60">
+            <div className="mt-6 text-sm flex flex-col space-y-4 text-white/60">
               <Link href="/services">Websites</Link>
               <Link href="/services">Web Applications</Link>
               <Link href="/services">Mobile Apps</Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               Company
             </h3>
 
-            <div className="mt-6 text-sm space-y-4 text-white/60">
+            <div className="mt-6 flex flex-col text-sm space-y-4 text-white/60">
               <Link href="/about">About</Link>
               <Link href="/portfolio">Portfolio</Link>
               <Link href="/pricing">Pricing</Link>

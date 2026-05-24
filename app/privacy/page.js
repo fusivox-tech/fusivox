@@ -10,7 +10,7 @@ export default function PrivacyPage() {
     <>
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
-        <section className="pt-24 md:pt-32 pb-12 md:pb-20">
+        <section className="pt-8 md:pt-8 pb-12 md:pb-20">
           <Container>
             <FadeInUp>
               <div className="max-w-4xl mx-auto">

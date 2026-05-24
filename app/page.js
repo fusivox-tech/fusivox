@@ -11,8 +11,9 @@ import CTASection from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
-    <main className="bg-white relative text-[#0B1020] overflow-hidden">
-      <Navbar />
+    <div className="relative">
+    <Navbar />
+    <main className="bg-white text-[#0B1020] overflow-hidden">
 
       <Hero />
       <TrustedSection />
@@ -24,5 +25,6 @@ export default function HomePage() {
 
       <Footer />
     </main>
+    </div>
   );
 }
