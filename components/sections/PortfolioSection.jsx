@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Zoommia",
     category: "Multi-Vendor E-Commerce",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648953/file_00000000d4e0724388b4c32a5bb980f8_gvv6rg.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655086/file_0000000010f071f49f4a86dc12cc6802_b8umxt.png",
     description: "Full-stack multi-vendor e-commerce platform with payment integration, order management, notification system, and comprehensive vendor management.",
     tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
     liveLink: "https://zoomia.fusivox.com.ng",
@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Ges Vis Studios",
     category: "Business Website / Portfolio",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648970/file_00000000d49071f48e7beff6b53f33ed_vlcy6z.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655179/file_00000000e29c7243aac04c4df115cb7b_xmbs12.png",
     description: "Luxurious website with modern animated UI and advanced traffic analysis, helping a local audio-visual studio elevate their brand presence online.",
     tech: ["Next.js", "Tailwind", "Cloudinary", "Vercel"],
     liveLink: "https://gesvisstudios.com",
