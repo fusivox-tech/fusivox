@@ -66,7 +66,7 @@ const projects = [
     gradient: "from-teal-600 to-cyan-600"
   },
   {
-    title: "Salvy Footware",
+    title: "Salvy Footwear",
     category: "E-Commerce Store / Inventory Management",
     image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779569210/file_00000000652c7246af801aefbe0021d9_eukgxb.png",
     problem: "A handmade footwear production business needed a digital presence to reach a wider audience and a business management system to help keep their operations organized and scalable.",

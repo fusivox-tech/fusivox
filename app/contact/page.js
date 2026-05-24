@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 import { FadeInUp, FadeIn } from "@/components/ui/ScrollAnimation";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { Send, Mail, Phone, MapPin } from "lucide-react";
+import CustomSelect from "@/components/ui/CustomSelect"; // Import the custom select
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,6 +30,41 @@ export default function ContactPage() {
       [e.target.name]: e.target.value
     });
   };
+
+  // Define options for each dropdown
+  const projectOptions = [
+    { value: "", label: "Select project type" },
+    { value: "Business Website", label: "Business Website" },
+    { value: "Web Application", label: "Web Application" },
+    { value: "Mobile App", label: "Mobile App" },
+    { value: "Internal Tool", label: "Internal Tool" },
+    { value: "Not sure yet", label: "Not sure yet" }
+  ];
+
+  const designsOptions = [
+    { value: "", label: "Select option" },
+    { value: "Yes, I have complete designs", label: "Yes, I have complete designs" },
+    { value: "I have some rough sketches", label: "I have some rough sketches" },
+    { value: "No, I need help with design", label: "No, I need help with design" }
+  ];
+
+  const timelineOptions = [
+    { value: "", label: "Select timeline" },
+    { value: "ASAP (within 2-4 weeks)", label: "ASAP (within 2-4 weeks)" },
+    { value: "1-2 months", label: "1-2 months" },
+    { value: "3-4 months", label: "3-4 months" },
+    { value: "Flexible", label: "Flexible" }
+  ];
+
+  const budgetOptions = [
+    { value: "", label: "Select budget range" },
+    { value: "Below ₦100,000", label: "Below ₦100,000" },
+    { value: "₦100,000 - ₦300,000", label: "₦100,000 - ₦300,000" },
+    { value: "₦300,000 - ₦500,000", label: "₦300,000 - ₦500,000" },
+    { value: "₦500,000 - ₦1,000,000", label: "₦500,000 - ₦1,000,000" },
+    { value: "₦1,000,000+", label: "₦1,000,000+" },
+    { value: "Need advice", label: "Need advice" }
+  ];
 
   return (
     <>
@@ -62,20 +98,14 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold mb-2">
                       What are you building? *
                     </label>
-                    <select
+                    <CustomSelect
                       name="project"
-                      required
                       value={formData.project}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
-                    >
-                      <option value="">Select project type</option>
-                      <option value="Business Website">Business Website</option>
-                      <option value="Web Application">Web Application</option>
-                      <option value="Mobile App">Mobile App</option>
-                      <option value="Internal Tool">Internal Tool</option>
-                      <option value="Not sure yet">Not sure yet</option>
-                    </select>
+                      options={projectOptions}
+                      placeholder="Select project type"
+                      required
+                    />
                   </div>
 
                   {/* Problem */}
@@ -99,17 +129,13 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold mb-2">
                       Do you already have designs?
                     </label>
-                    <select
+                    <CustomSelect
                       name="designs"
                       value={formData.designs}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
-                    >
-                      <option value="">Select option</option>
-                      <option value="Yes, I have complete designs">Yes, I have complete designs</option>
-                      <option value="I have some rough sketches">I have some rough sketches</option>
-                      <option value="No, I need help with design">No, I need help with design</option>
-                    </select>
+                      options={designsOptions}
+                      placeholder="Select option"
+                    />
                   </div>
 
                   {/* Timeline */}
@@ -117,18 +143,13 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold mb-2">
                       What timeline are you working with?
                     </label>
-                    <select
+                    <CustomSelect
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
-                    >
-                      <option value="">Select timeline</option>
-                      <option value="ASAP (within 2-4 weeks)">ASAP (within 2-4 weeks)</option>
-                      <option value="1-2 months">1-2 months</option>
-                      <option value="3-4 months">3-4 months</option>
-                      <option value="Flexible">Flexible</option>
-                    </select>
+                      options={timelineOptions}
+                      placeholder="Select timeline"
+                    />
                   </div>
 
                   {/* Budget */}
@@ -136,20 +157,13 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold mb-2">
                       What's your estimated budget?
                     </label>
-                    <select
+                    <CustomSelect
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="Below ₦500,000">Below ₦500,000</option>
-                      <option value="₦500,000 - ₦1,000,000">₦500,000 - ₦1,000,000</option>
-                      <option value="₦1,000,000 - ₦2,500,000">₦1,000,000 - ₦2,500,000</option>
-                      <option value="₦2,500,000 - ₦5,000,000">₦2,500,000 - ₦5,000,000</option>
-                      <option value="₦5,000,000+">₦5,000,000+</option>
-                      <option value="Need advice">Need advice</option>
-                    </select>
+                      options={budgetOptions}
+                      placeholder="Select budget range"
+                    />
                   </div>
 
                   <button
