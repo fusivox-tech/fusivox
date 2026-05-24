@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Zoommia",
     category: "Multi-Vendor E-Commerce Platform",
-    image: "https://res.cloudinary.com/danuehpic/image/upload/v1778558276/file_00000000340c720a9d31fa71f0879c2d_uzcdr0.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648953/file_00000000d4e0724388b4c32a5bb980f8_gvv6rg.png",
     problem: "The internet created a seemingly impossible challenge to build a full-stack multi-vendor e-commerce platform (like Jumia, Konga, etc.), with experienced developers claiming it would take no less than 3 months due to complex systems including payment integration, order management, notification system, and vendor management.",
     solution: "Built the user-facing web app with buyer feeds and seller onboarding system integration, payment integration with Paystack, a robust email notification system, and a comprehensive admin panel for user management, dispute settlement, and a bird's eye view of the entire operation.",
     outcome: "With our advanced skills, we delivered the product in just 3 days! The platform was successfully tested by thousands of users, proving that complex systems can be built efficiently with the right expertise.",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Ges Vis Studios",
     category: "Business Website / Portfolio",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779567338/gesvis-vercel-app-1420x1000desktop-101276_ilef2y.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648970/file_00000000d49071f48e7beff6b53f33ed_vlcy6z.png",
     problem: "A local audio-visual studio wanted to elevate their brand presence and carve out a portion of the digital world for themselves, aiming for broader reach and a more luxurious reputation.",
     solution: "Built a fully customized luxurious website with a modern feel through an animated UI and advanced traffic analysis integration with Vercel Analytics.",
     outcome: "Started experiencing increased business visibility immediately with better conversion rates and enhanced brand perception.",
@@ -35,7 +35,7 @@ const projects = [
   {
     title: "BullFaucet",
     category: "Enterprise Grade Crypto Platform",
-    image: 'https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779573774/file_00000000cb5071f4bfe973b6cf6e1ebc_r4bbo1.png',
+    image: 'https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648952/file_00000000aa7c72439d35bf8082458929_kamoqs.png',
     problem: "A crypto startup needed an enterprise-grade reward and advertising platform that integrates with multiple third-party tasks and reward APIs.",
     solution: "Built a fully customized solution consisting of a user-facing reward web app with advanced user authentication (email, password, 2FA, Google OAuth). Integrated 8 third-party task and reward APIs, automated cryptocurrency deposit and transfer via Solana, BSC, and Bitcoin blockchains. Also built a robust admin panel with a detailed dashboard and user management system with real-time email and push notification system.",
     outcome: "Helped the company launch their project in record time and provided ongoing support for 6 months.",
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "MobileNative",
     category: "E-Learning Tech Education Mobile App",
-    image: "https://res.cloudinary.com/danuehpic/image/upload/v1778558184/file_00000000d28071f4ae51b79a374640de_nugqit.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648952/file_000000007d0071f483d78ddaab60994b_bwmxa9.png",
     problem: "A tech education platform needed a custom cross-platform mobile app solution where their students could learn and practice with ease across both iOS and Android devices.",
     solution: "Developed a functional learning platform with advanced media handling and a database system that accurately tracks course purchases and monthly subscriptions, with seamless payment integration using Paystack.",
     outcome: "Students achieved 50% faster learning progress due to the ease of access to educational materials and improved user experience.",
@@ -57,7 +57,7 @@ const projects = [
   {
     title: "Devine Act Painting Services",
     category: "Landing Page / Mini Portfolio",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779568104/devineact-vercel-app-1420x1000desktop-08dbdc_xwifgz.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648956/file_0000000079e87243af23cbc39b1b255e_wybto1.png",
     problem: "A painting and decoration professional needed an online presence to help attract more clients and showcase their portfolio of work.",
     solution: "Created an attractive landing page with advanced SEO that showcases recently delivered jobs by the business and features an intuitive call-to-action system connecting clients directly to the business via WhatsApp.",
     outcome: "Increased client acquisition and retention with a significantly wider digital reach in their local market.",
@@ -68,7 +68,7 @@ const projects = [
   {
     title: "Salvy Footwear",
     category: "E-Commerce Store / Inventory Management",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779569210/file_00000000652c7246af801aefbe0021d9_eukgxb.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648965/file_00000000daa871f480b93cdc1cfe1710_mourvl.png",
     problem: "A handmade footwear production business needed a digital presence to reach a wider audience and a business management system to help keep their operations organized and scalable.",
     solution: "Built a state-of-the-art e-commerce platform with advanced product feeds, order tracking, payment system integration, and a robust admin panel for complete inventory and order management.",
     outcome: "The business gained better visibility into their inventory operations and achieved a wider client reach, resulting in increased sales and operational efficiency.",
@@ -120,27 +120,6 @@ export default function PortfolioPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    {/* Category Badge */}
-                    <div className="absolute top-3 md:top-4 right-3 md:right-4">
-                      <span className="px-2 md:px-3 py-1 bg-black/70 backdrop-blur-sm rounded-full text-[10px] md:text-xs text-white font-medium">
-                        {project.category}
-                      </span>
-                    </div>
-
-                    {/* Live Link Overlay */}
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50"
-                    >
-                      <div className="flex gap-3">
-                        <span className="px-4 py-2 bg-white text-black rounded-full text-sm font-semibold flex items-center gap-2">
-                          <Eye className="w-4 h-4" />
-                          View Live
-                        </span>
-                      </div>
-                    </a>
                   </div>
 
                   {/* Content */}
@@ -148,6 +127,8 @@ export default function PortfolioPage() {
                     <h2 className="text-lg md:text-xl font-black tracking-tight mb-2">
                       {project.title}
                     </h2>
+                    
+                    <p className="mt-3 md:mt-4 text-xs md:text-sm text-black/60 leading-relaxed line-clamp-3">{project.category}</p>
                     
                     <div className="space-y-3 mt-4">
                       <div>

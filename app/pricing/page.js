@@ -48,7 +48,7 @@ const pricingTiers = [
     includes: [
       "User authentication",
       "Database integration",
-      "Admin panel",
+      "Responsive Layout",
       "API development",
       "Payment integration",
       "6 months support"

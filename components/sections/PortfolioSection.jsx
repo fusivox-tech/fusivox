@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Zoommia",
     category: "Multi-Vendor E-Commerce",
-    image: "https://res.cloudinary.com/danuehpic/image/upload/v1778558276/file_00000000340c720a9d31fa71f0879c2d_uzcdr0.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648953/file_00000000d4e0724388b4c32a5bb980f8_gvv6rg.png",
     description: "Full-stack multi-vendor e-commerce platform with payment integration, order management, notification system, and comprehensive vendor management.",
     tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
     liveLink: "https://zoomia.fusivox.com.ng",
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "BullFaucet",
     category: "Enterprise Grade Crypto Platform",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779573774/file_00000000cb5071f4bfe973b6cf6e1ebc_r4bbo1.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648952/file_00000000aa7c72439d35bf8082458929_kamoqs.png",
     description: "Enterprise-grade crypto reward platform with multi-chain support, advanced user authentication, and automated cryptocurrency deposits across Solana, BSC, and Bitcoin blockchains.",
     tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
     liveLink: "https://www.bullfaucet.com",
@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Ges Vis Studios",
     category: "Business Website / Portfolio",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779567338/gesvis-vercel-app-1420x1000desktop-101276_ilef2y.png",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779648970/file_00000000d49071f48e7beff6b53f33ed_vlcy6z.png",
     description: "Luxurious website with modern animated UI and advanced traffic analysis, helping a local audio-visual studio elevate their brand presence online.",
     tech: ["Next.js", "Tailwind", "Cloudinary", "Vercel"],
     liveLink: "https://gesvisstudios.com",
@@ -75,25 +75,6 @@ export default function PortfolioSection() {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                {/* Category Badge */}
-                <div className="absolute top-3 md:top-4 right-3 md:right-4">
-                  <span className="px-2 md:px-3 py-1 bg-black/70 backdrop-blur-sm rounded-full text-[10px] md:text-xs text-white font-medium">
-                    {project.category}
-                  </span>
-                </div>
-
-                {/* Live Link Overlay */}
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60"
-                >
-                  <span className="px-4 py-2 bg-white text-black rounded-full text-sm font-semibold flex items-center gap-2">
-                    <Eye className="w-4 h-4" />
-                    Live Demo
-                  </span>
-                </a>
               </div>
 
               {/* Content */}
@@ -101,6 +82,8 @@ export default function PortfolioSection() {
                 <h3 className="text-lg md:text-xl font-black tracking-tight">
                   {project.title}
                 </h3>
+                
+                <p className="mt-3 md:mt-4 text-xs md:text-sm text-black/60 leading-relaxed line-clamp-3">{project.category}</p>
 
                 <p className="mt-3 md:mt-4 text-xs md:text-sm text-black/60 leading-relaxed line-clamp-3">
                   {project.description}
@@ -123,13 +106,13 @@ export default function PortfolioSection() {
                 </div>
 
                 {/* View Details Link */}
-                <Link
-                  href={`/portfolio#${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                <a
+                  href={project.liveLink}
                   className="mt-5 md:mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#5B5CF0] hover:gap-3 transition-all"
                 >
-                  View case study
+                  View Live Demo
                   <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
