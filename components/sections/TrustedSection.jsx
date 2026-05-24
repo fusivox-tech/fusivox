@@ -6,6 +6,7 @@ import {
   PenTool,
   Briefcase,
   Cog,
+  ShoppingBag
 } from "lucide-react";
 import Container from "../ui/Container";
 import { FadeInUp, StaggerChildren } from "../ui/ScrollAnimation";
@@ -27,12 +28,17 @@ const items = [
     text: "Showcase your work beautifully.",
   },
   {
-    icon: Briefcase,
+    icon: Cog,
     title: "Service Businesses",
     text: "Generate leads and serve clients better.",
   },
   {
-    icon: Cog,
+    icon: ShoppingBag,
+    title: "E-commerce Businesses",
+    text: "Sell products online with seamless shopping experiences.",
+  },
+  {
+    icon: Briefcase,
     title: "Corporations",
     text: "Streamline operations and workflows.",
   },
@@ -48,7 +54,7 @@ export default function TrustedSection() {
           </h2>
         </FadeInUp>
 
-        <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
+        <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
           {items.map((item) => {
             const Icon = item.icon;
 

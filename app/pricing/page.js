@@ -95,7 +95,7 @@ export default function PricingPage() {
         {/* Pricing Cards */}
         <section className="pb-16 md:pb-24">
           <Container>
-            <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <StaggerChildren className="grid md:grid-cols-3 gap-6 md:gap-8">
               {pricingTiers.map((tier) => (
                 <div
                   key={tier.name}
