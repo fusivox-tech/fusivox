@@ -9,12 +9,29 @@ import { ArrowRight, Check, HelpCircle } from "lucide-react";
 
 const pricingTiers = [
   {
+    name: "Landing Pages",
+    startingFrom: "₦100,000",
+    description: "High-converting landing pages designed to capture leads and drive sales.",
+    idealFor: "Product launches, marketing campaigns, event registration, startups",
+    includes: [
+      "Custom design",
+      "Mobile responsive",
+      "Lead capture forms",
+      "Analytics tracking",
+      "A/B testing ready",
+      "1 month support",
+      "Fast loading (5s target)"
+    ],
+    gradient: "from-amber-50 to-orange-50"
+  },
+  {
     name: "Business Websites",
-    startingFrom: "₦450,000",
+    startingFrom: "₦300,000",
     description: "For businesses that need a professional online presence.",
     idealFor: "Small to medium businesses, brands, portfolios",
     includes: [
       "Custom design",
+      "Multiple Pages",
       "Responsive layout",
       "Contact forms",
       "Basic SEO setup",
@@ -24,10 +41,10 @@ const pricingTiers = [
     gradient: "from-blue-50 to-indigo-50"
   },
   {
-    name: "Web Applications",
-    startingFrom: "₦1,500,000",
+    name: "Full-Stack Web Apps",
+    startingFrom: "₦500,000",
     description: "For businesses that need more than a normal website.",
-    idealFor: "Dashboards, customer portals, booking platforms",
+    idealFor: "Dashboards, customer portals, booking platforms, e-commerce stores",
     includes: [
       "User authentication",
       "Database integration",
@@ -41,7 +58,7 @@ const pricingTiers = [
   },
   {
     name: "Mobile Apps",
-    startingFrom: "₦2,500,000",
+    startingFrom: "₦1,200,000",
     description: "Native mobile experiences for iOS and Android.",
     idealFor: "iOS apps, Android apps, cross-platform solutions",
     includes: [
