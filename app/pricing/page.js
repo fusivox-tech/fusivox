@@ -53,8 +53,7 @@ const pricingTiers = [
       "Payment integration",
       "6 months support"
     ],
-    gradient: "from-purple-50 to-pink-50",
-    popular: true
+    gradient: "from-purple-50 to-pink-50"
   },
   {
     name: "Mobile Apps",
@@ -109,7 +108,7 @@ export default function PricingPage() {
         {/* Pricing Cards */}
         <section className="pb-16 md:pb-24">
           <Container>
-            <StaggerChildren className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <StaggerChildren className="grid md:grid-cols-2 gap-6 md:gap-8">
               {pricingTiers.map((tier) => (
                 <div
                   key={tier.name}
