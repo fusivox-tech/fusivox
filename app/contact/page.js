@@ -58,11 +58,11 @@ export default function ContactPage() {
 
   const budgetOptions = [
     { value: "", label: "Select budget range" },
-    { value: "Below ₦100,000", label: "Below ₦100,000" },
-    { value: "₦100,000 - ₦300,000", label: "₦100,000 - ₦300,000" },
-    { value: "₦300,000 - ₦500,000", label: "₦300,000 - ₦500,000" },
+    { value: "Below ₦500,000", label: "Below ₦500,000" },
     { value: "₦500,000 - ₦1,000,000", label: "₦500,000 - ₦1,000,000" },
-    { value: "₦1,000,000+", label: "₦1,000,000+" },
+    { value: "₦1,000,000 - ₦2,500,000", label: "₦1,000,000 - ₦2,500,000" },
+    { value: "₦2,500,000 - ₦5,000,000", label: "₦2,500,000 - ₦5,000,000" },
+    { value: "₦5,000,000+", label: "₦5,000,000+" },
     { value: "Need advice", label: "Need advice" }
   ];
 

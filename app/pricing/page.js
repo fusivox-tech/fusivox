@@ -10,50 +10,47 @@ import { ArrowRight, Check, HelpCircle } from "lucide-react";
 const pricingTiers = [
   {
     name: "Business Websites",
-    startingFrom: "₦150,000",
+    startingFrom: "₦450,000",
     description: "For businesses that need a professional online presence.",
     idealFor: "Small to medium businesses, brands, portfolios",
     includes: [
       "Custom design",
-      "5 Pages",
+      "Responsive layout",
       "Contact forms",
       "Basic SEO setup",
       "Analytics integration",
-      "2 weeks support"
+      "3 months support"
     ],
     gradient: "from-blue-50 to-indigo-50"
   },
   {
     name: "Web Applications",
-    startingFrom: "₦350,000",
+    startingFrom: "₦1,500,000",
     description: "For businesses that need more than a normal website.",
-    idealFor: "Dashboards, E-Commerce Store, booking platforms",
+    idealFor: "Dashboards, customer portals, booking platforms",
     includes: [
       "User authentication",
-      "10 Pages",
       "Database integration",
       "Admin panel",
       "API development",
       "Payment integration",
-      "2 months support"
+      "6 months support"
     ],
     gradient: "from-purple-50 to-pink-50",
     popular: true
   },
   {
     name: "Mobile Apps",
-    startingFrom: "₦600,000",
+    startingFrom: "₦2,500,000",
     description: "Native mobile experiences for iOS and Android.",
     idealFor: "iOS apps, Android apps, cross-platform solutions",
     includes: [
       "Native performance",
-      "8 Screens",
       "Push notifications",
-      "Admin Panel",
       "Offline support",
       "App store deployment",
       "Analytics",
-      "2 months support"
+      "6 months support"
     ],
     gradient: "from-green-50 to-emerald-50"
   }
