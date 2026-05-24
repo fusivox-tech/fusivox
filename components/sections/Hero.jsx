@@ -18,7 +18,6 @@ export default function Hero() {
     <section className="relative pt-10 pb-10 overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-2 gap-10 md:gap-0 items-center">
-          <FadeInUp>
             <div>
               <h1 className="text-4xl lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
                 We build softwares that businesses can{" "}
@@ -56,11 +55,18 @@ export default function Hero() {
                 </button>
               </div>
             </div>
-          </FadeInUp>
-
+            
+          <FadeInUp>
           <div className="flex items-center justify-center flex-1">
-            <img src="/hero-image.svg" className="w-full h-auto transform scale-110 md:scale-100" alt="" />
+            <img 
+              src="/hero-image.svg"
+              alt="Hero"
+              loading="eager"
+              fetchPriority="high"
+              className="w-full h-auto transform scale-110 md:scale-100"
+            />
           </div>
+          </FadeInUp>
         </div>
       </Container>
     </section>

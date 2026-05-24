@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-16">
           <div>
             <div className="text-3xl font-black">
-              <img src="/wordmark.svg" className="h-7" alt="" />
+              <img src="/wordmark.svg" alt="Logo" loading="eager" fetchPriority="high" className="h-6" />
             </div>
 
             <p className="mt-6 text-sm text-white/60 leading-7">

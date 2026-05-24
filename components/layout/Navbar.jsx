@@ -72,7 +72,7 @@ export default function Navbar() {
         <Container>
           <div className="h-20 flex items-center justify-between">
             <Link href="/" className="text-2xl font-black tracking-tight">
-              <img src="/wordmark.svg" className="h-6" alt="logo" />
+              <img src="/wordmark.svg" alt="Logo" loading="eager" fetchPriority="high" className="h-6" />
             </Link>
 
             {/* Desktop Navigation */}
