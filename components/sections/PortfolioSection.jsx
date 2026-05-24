@@ -108,6 +108,7 @@ export default function PortfolioSection() {
                 {/* View Details Link */}
                 <a
                   href={project.liveLink}
+                  target="_blank"
                   className="mt-5 md:mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#5B5CF0] hover:gap-3 transition-all"
                 >
                   View Live Demo
