@@ -117,6 +117,7 @@ export default function PortfolioPage() {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      fetchPriority="high"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
@@ -145,9 +146,9 @@ export default function PortfolioPage() {
 
                   {/* Content */}
                   <div className="p-5 md:p-6">
-                    <h3 className="text-lg md:text-xl font-black tracking-tight mb-2">
+                    <h2 className="text-lg md:text-xl font-black tracking-tight mb-2">
                       {project.title}
-                    </h3>
+                    </h2>
                     
                     <div className="space-y-3 mt-4">
                       <div>
