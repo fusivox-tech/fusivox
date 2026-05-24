@@ -59,7 +59,7 @@ export default function Hero() {
           </FadeInUp>
 
           <div className="flex items-center justify-center flex-1">
-            <img src="/hero-image.svg" loading="eager" className="w-full h-auto transform scale-110 md:scale-100 aspect-square" fetchPriority="high" alt="" />
+            <img src="/hero-image.svg" className="w-full h-auto transform scale-110 md:scale-100 aspect-square" alt="" />
           </div>
         </div>
       </Container>
