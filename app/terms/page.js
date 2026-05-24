@@ -9,7 +9,7 @@ export default function TermsPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-[#0B1020]">
+      <main className="bg-white reltive text-[#0B1020]">
         <section className="pt-24 md:pt-32 pb-12 md:pb-20">
           <Container>
             <FadeInUp>

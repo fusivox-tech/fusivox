@@ -76,7 +76,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-3">
+            <nav className="hidden lg:flex items-center gap-10">
               {links.map((link) => {
                 const isActive = pathname === link.href;
 
@@ -85,7 +85,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     className={`
-                      relative px-5 py-2.5 text-[15px] font-medium transition-all duration-300
+                      relative px-0 py-2.5 text-[15px] font-medium transition-all duration-300
                       ${
                         isActive
                           ? "text-black border-b-2 border-[#5B5CF0]"

@@ -33,7 +33,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-[#0B1020]">
+      <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
         <section className="pt-8 pb-12 md:pb-16">
           <Container>

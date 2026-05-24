@@ -11,7 +11,7 @@ import CTASection from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
-    <main className="bg-white text-[#0B1020] overflow-hidden">
+    <main className="bg-white relative text-[#0B1020] overflow-hidden">
       <Navbar />
 
       <Hero />
