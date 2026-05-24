@@ -94,13 +94,7 @@ export default function FeaturesSection() {
           </div>
           
           <div className="flex items-center justify-center flex-1">
-            <img 
-              src="/second-image.svg"
-              alt="Performance Illustration"
-              loading="eager"
-              fetchPriority="high"
-              className="w-full h-auto transform scale-110 md:scale-100"
-            />
+            <img src="/second-image.svg" className="w-full h-auto transform scale-110 md:scale-100" loading="eager" alt="" />
           </div>
 
         </div>

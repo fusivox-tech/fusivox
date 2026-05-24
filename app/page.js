@@ -1,14 +1,13 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import dynamic from 'next/dynamic';
 
 import Hero from "@/components/sections/Hero";
-const TrustedSection = dynamic(() => import('@/components/sections/TrustedSection'));
-const ServicesGrid = dynamic(() => import('@/components/sections/ServicesGrid'));
-const PortfolioSection = dynamic(() => import('@/components/sections/PortfolioSection'));
-const FeaturesSection = dynamic(() => import('@/components/sections/FeaturesSection'));
-const ProcessSection = dynamic(() => import('@/components/sections/ProcessSection'));
-const CTASection = dynamic(() => import('@/components/sections/CTASection'));
+import TrustedSection from "@/components/sections/TrustedSection";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import CTASection from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
