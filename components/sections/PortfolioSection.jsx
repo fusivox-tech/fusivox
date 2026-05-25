@@ -9,7 +9,7 @@ const projects = [
     title: "Salvy Footwear",
     category: "E-Commerce Store / Inventory Management",
     image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655086/file_0000000045f471f49f94935828e341fe_dd7gvq.png",
-    solution: "A state-of-the-art e-commerce platform with advanced product feeds, order tracking, payment system integration, and a robust admin panel for complete inventory and order management.",
+    description: "A state-of-the-art e-commerce platform with advanced product feeds, order tracking, payment system integration, and a robust admin panel for complete inventory and order management.",
     tech: ["Next.js", "MongoDB", "Cloudinary", "Google Analytics", "Tailwind"],
     liveLink: "https://salvy-two.vercel.app",
     gradient: "from-rose-600 to-pink-600"
