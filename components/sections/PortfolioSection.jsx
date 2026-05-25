@@ -6,13 +6,13 @@ import { ArrowRight, Eye } from "lucide-react";
 
 const projects = [
   {
-    title: "Zoommia",
-    category: "Multi-Vendor E-Commerce",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655086/file_0000000010f071f49f4a86dc12cc6802_b8umxt.png",
-    description: "Full-stack multi-vendor e-commerce platform with payment integration, order management, notification system, and comprehensive vendor management.",
-    tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
-    liveLink: "https://zoomia.fusivox.com.ng",
-    gradient: "from-purple-600 to-pink-600"
+    title: "Salvy Footwear",
+    category: "E-Commerce Store / Inventory Management",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655086/file_0000000045f471f49f94935828e341fe_dd7gvq.png",
+    solution: "A state-of-the-art e-commerce platform with advanced product feeds, order tracking, payment system integration, and a robust admin panel for complete inventory and order management.",
+    tech: ["Next.js", "MongoDB", "Cloudinary", "Google Analytics", "Tailwind"],
+    liveLink: "https://salvy-two.vercel.app",
+    gradient: "from-rose-600 to-pink-600"
   },
   {
     title: "BullFaucet",

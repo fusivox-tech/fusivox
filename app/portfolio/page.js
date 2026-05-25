@@ -11,17 +11,6 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Zoommia",
-    category: "Multi-Vendor E-Commerce Platform",
-    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655086/file_0000000010f071f49f4a86dc12cc6802_b8umxt.png",
-    problem: "The internet created a seemingly impossible challenge to build a full-stack multi-vendor e-commerce platform (like Jumia, Konga, etc.), with experienced developers claiming it would take no less than 3 months due to complex systems including payment integration, order management, notification system, and vendor management.",
-    solution: "Built the user-facing web app with buyer feeds and seller onboarding system integration, payment integration with Paystack, a robust email notification system, and a comprehensive admin panel for user management, dispute settlement, and a bird's eye view of the entire operation.",
-    outcome: "With our advanced skills, we delivered the product in just 3 days! The platform was successfully tested by thousands of users, proving that complex systems can be built efficiently with the right expertise.",
-    tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
-    liveLink: "https://zoomia.fusivox.com.ng",
-    gradient: "from-purple-600 to-pink-600"
-  },
-  {
     title: "Ges Vis Studios",
     category: "Business Website / Portfolio",
     image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779655179/file_00000000e29c7243aac04c4df115cb7b_xmbs12.png",
@@ -42,6 +31,17 @@ const projects = [
     tech: ["React.js", "Node.js", "MongoDB", "Web3", "OAuth2"],
     liveLink: "https://www.bullfaucet.com",
     gradient: "from-blue-600 to-indigo-600"
+  },
+  {
+    title: "Zoommia",
+    category: "Multi-Vendor E-Commerce Platform",
+    image: "https://res.cloudinary.com/dglf6qtub/image/upload/q_auto/f_auto/v1779688654/file_00000000823471f4a86b7caf13ad1ff9_dztyrh.png",
+    problem: "The internet created a seemingly impossible challenge to build a full-stack multi-vendor e-commerce platform (like Jumia, Konga, etc.), with experienced developers claiming it would take no less than 3 months due to complex systems including payment integration, order management, notification system, and vendor management.",
+    solution: "Built the user-facing web app with buyer feeds and seller onboarding system integration, payment integration with Paystack, a robust email notification system, and a comprehensive admin panel for user management, dispute settlement, and a bird's eye view of the entire operation.",
+    outcome: "With our advanced skills, we delivered the product in just 3 days! The platform was successfully tested by thousands of users, proving that complex systems can be built efficiently with the right expertise.",
+    tech: ["React", "Node.js", "MongoDB", "Paystack", "SMTP"],
+    liveLink: "https://zoomia.fusivox.com.ng",
+    gradient: "from-purple-600 to-pink-600"
   },
   {
     title: "MobileNative",
