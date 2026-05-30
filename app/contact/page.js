@@ -389,7 +389,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="font-bold text-lg mb-1">WhatsApp</h3>
                     <p className="text-sm text-black/60">+234 810 944 8643</p>
-                    <p className="text-xs text-green-600 mt-2 group-hover:underline">Click to chat →</p>
+                    <p className="text-xs text-green-600 mt-2 group-hover:underline">Click to chat</p>
                   </div>
                   
                   {/* Email */}
