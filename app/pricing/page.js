@@ -151,7 +151,7 @@ export default function PricingPage() {
                   
                   <Link 
                     href="/contact"
-                    className="mt-6 md:mt-8 p-3 px-6 w-full h-10 md:h-12 rounded-xl bg-[#0B1020] text-white text-sm md:text-base font-semibold hover:bg-[#1a1f35] transition-colors"
+                    className="mt-6 md:mt-8 p-3 px-6 w-full rounded-xl bg-[#0B1020] text-white text-sm md:text-base font-semibold hover:bg-[#1a1f35] transition-colors"
                   >
                     Get exact quote
                   </Link>
