@@ -93,13 +93,20 @@ export default function ContactPage() {
     });
   };
 
-  // Options for dropdowns
+  // Options for dropdowns with icon mapping
   const preferredContactOptions = [
     { value: "", label: "Select preferred contact method" },
     { value: "WhatsApp", label: "WhatsApp" },
     { value: "Phone Call", label: "Phone Call" },
     { value: "Email", label: "Email" }
   ];
+
+  // Icon mapping for preferred contact methods
+  const contactIconMap = {
+    "WhatsApp": MessageCircle,
+    "Phone Call": PhoneCall,
+    "Email": Mail
+  };
 
   const projectOptions = [
     { value: "", label: "Select project type" },
@@ -140,7 +147,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="bg-gradient-to-b from-white to-[#FAFBFF] relative text-[#0B1020]">
         
-        {/* Hero Section - Redesigned */}
+        {/* Hero Section */}
         <section className="pt-12 pb-16 md:pt-16 md:pb-20">
           <Container>
             <FadeInUp>
@@ -161,7 +168,7 @@ export default function ContactPage() {
           </Container>
         </section>
 
-        {/* Contact Form - Redesigned with Contact Fields */}
+        {/* Contact Form */}
         <section className="pb-20 md:pb-32">
           <Container>
             <div className="max-w-4xl mx-auto">
@@ -242,23 +249,20 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        {/* Preferred Contact Method */}
+                        {/* Preferred Contact Method with Dynamic Icon */}
                         <div>
                           <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
                             Preferred Contact Method *
                           </label>
-                          <div className="relative">
-                            <MessageCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black/40 pointer-events-none" />
-                            <CustomSelect
-                              name="preferredContact"
-                              value={formData.preferredContact}
-                              onChange={handleChange}
-                              options={preferredContactOptions}
-                              placeholder="Select contact method"
-                              required
-                              className="pl-10"
-                            />
-                          </div>
+                          <CustomSelect
+                            name="preferredContact"
+                            value={formData.preferredContact}
+                            onChange={handleChange}
+                            options={preferredContactOptions}
+                            placeholder="Select contact method"
+                            required
+                            iconMap={contactIconMap}
+                          />
                         </div>
                       </div>
                     </div>
@@ -414,7 +418,7 @@ export default function ContactPage() {
           </Container>
         </section>
 
-        {/* FAQ Section - Enhanced */}
+        {/* FAQ Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-[#FAFBFF] to-white">
           <Container>
             <FadeInUp className="text-center mb-12 md:mb-16">
