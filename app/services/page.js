@@ -183,12 +183,12 @@ export default function ServicesPage() {
                       <div className="relative bg-white rounded-2xl border border-black/5 hover:border-[#5B5CF0]/20 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col overflow-hidden">
                         
                         <div className="p-6 md:p-8 flex-1">
-                          <div className="flex items-center gap-5">
+                          <div className="flex items-center gap-5 mb-5">
                           {/* Icon */}
                           <div className={`w-10 h-10 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mb-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-5 h-5 text-white" />
                           </div>
-                          <h2 className="text-2xl font-black mb-2">{service.title}</h2>
+                          <h2 className="text-2xl font-black mb-0">{service.title}</h2>
                           </div>
                           
                           <p className="text-sm text-black/70 mb-3">{service.subtitle}</p>
