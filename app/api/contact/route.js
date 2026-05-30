@@ -4,17 +4,26 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { project, problem, designs, timeline, budget } = body;
+    const { 
+      name, 
+      email, 
+      phone, 
+      preferredContact,
+      project, 
+      problem, 
+      designs, 
+      timeline, 
+      budget 
+    } = body;
 
     // Validate required fields
-    if (!project || !problem) {
+    if (!name || !email || !phone || !preferredContact || !project || !problem) {
       return NextResponse.json(
-        { error: 'Project type and problem description are required' },
+        { error: 'Please fill in all required fields' },
         { status: 400 }
       );
     }
 
-    // Configure nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: "smtp.zeptomail.com",
       port: 587,
@@ -28,7 +37,7 @@ export async function POST(request) {
     const mailOptions = {
       from: `"Fusivox Contact Form" <noreply@bullfaucet.com>`,
       to: 'fusivox@gmail.com',
-      subject: `New Contact Form Submission - ${project}`,
+      subject: `New Contact Form Submission from ${name} - ${project}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -38,9 +47,11 @@ export async function POST(request) {
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
             .header { background: #5B5CF0; color: white; padding: 20px; text-align: center; }
             .content { padding: 20px; background: #f9f9f9; }
-            .field { margin-bottom: 20px; }
-            .label { font-weight: bold; color: #5B5CF0; margin-bottom: 5px; }
-            .value { margin-top: 5px; }
+            .section { margin-bottom: 25px; }
+            .section-title { font-size: 18px; font-weight: bold; color: #5B5CF0; margin-bottom: 15px; border-bottom: 2px solid #5B5CF0; padding-bottom: 5px; }
+            .field { margin-bottom: 15px; }
+            .label { font-weight: bold; color: #555; margin-bottom: 5px; }
+            .value { margin-top: 5px; color: #333; }
             hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
           </style>
         </head>
@@ -50,36 +61,55 @@ export async function POST(request) {
               <h2>New Contact Form Submission</h2>
             </div>
             <div class="content">
-              <div class="field">
-                <div class="label">📋 Project Type</div>
-                <div class="value">${project}</div>
+              <div class="section">
+                <div class="section-title">👤 Contact Information</div>
+                <div class="field">
+                  <div class="label">Full Name:</div>
+                  <div class="value">${name}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Email Address:</div>
+                  <div class="value">${email}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Phone Number:</div>
+                  <div class="value">${phone}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Preferred Contact:</div>
+                  <div class="value">${preferredContact}</div>
+                </div>
               </div>
               
-              <div class="field">
-                <div class="label">❓ Problem to Solve</div>
-                <div class="value">${problem.replace(/\n/g, '<br/>')}</div>
+              <div class="section">
+                <div class="section-title">📋 Project Details</div>
+                <div class="field">
+                  <div class="label">Project Type:</div>
+                  <div class="value">${project}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Problem to Solve:</div>
+                  <div class="value">${problem.replace(/\n/g, '<br/>')}</div>
+                </div>
+                ${designs ? `
+                <div class="field">
+                  <div class="label">Design Status:</div>
+                  <div class="value">${designs}</div>
+                </div>
+                ` : ''}
+                ${timeline ? `
+                <div class="field">
+                  <div class="label">Timeline:</div>
+                  <div class="value">${timeline}</div>
+                </div>
+                ` : ''}
+                ${budget ? `
+                <div class="field">
+                  <div class="label">Budget Range:</div>
+                  <div class="value">${budget}</div>
+                </div>
+                ` : ''}
               </div>
-              
-              ${designs ? `
-              <div class="field">
-                <div class="label">🎨 Design Status</div>
-                <div class="value">${designs}</div>
-              </div>
-              ` : ''}
-              
-              ${timeline ? `
-              <div class="field">
-                <div class="label">⏰ Timeline</div>
-                <div class="value">${timeline}</div>
-              </div>
-              ` : ''}
-              
-              ${budget ? `
-              <div class="field">
-                <div class="label">💰 Budget Range</div>
-                <div class="value">${budget}</div>
-              </div>
-              ` : ''}
               
               <hr/>
               <p style="font-size: 12px; color: #666; text-align: center;">
@@ -93,6 +123,13 @@ export async function POST(request) {
       text: `
         New Contact Form Submission
         
+        CONTACT INFORMATION:
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone}
+        Preferred Contact: ${preferredContact}
+        
+        PROJECT DETAILS:
         Project Type: ${project}
         Problem: ${problem}
         ${designs ? `Designs: ${designs}` : ''}

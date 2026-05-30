@@ -5,12 +5,32 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import { FadeInUp, FadeIn } from "@/components/ui/ScrollAnimation";
-import { Send, Mail, Phone, MapPin, Loader2 } from "lucide-react";
+import { 
+  Send, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Loader2,
+  User,
+  MessageCircle,
+  PhoneCall,
+  AtSign,
+  Briefcase,
+  AlertCircle,
+  Palette,
+  Clock,
+  DollarSign,
+  CheckCircle
+} from "lucide-react";
 import CustomSelect from "@/components/ui/CustomSelect";
 import SuccessModal from "@/components/ui/SuccessModal";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    preferredContact: "",
     project: "",
     problem: "",
     designs: "",
@@ -38,12 +58,15 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (response.ok) {
-        // Success - show modal
         setModalMessage("Thank you for reaching out! We'll get back to you within 24 hours.");
         setModalOpen(true);
         
         // Reset form
         setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          preferredContact: "",
           project: "",
           problem: "",
           designs: "",
@@ -51,7 +74,6 @@ export default function ContactPage() {
           budget: ""
         });
       } else {
-        // Error
         setModalMessage(data.error || "Something went wrong. Please try again.");
         setModalOpen(true);
       }
@@ -71,7 +93,14 @@ export default function ContactPage() {
     });
   };
 
-  // Define options for each dropdown
+  // Options for dropdowns
+  const preferredContactOptions = [
+    { value: "", label: "Select preferred contact method" },
+    { value: "WhatsApp", label: "WhatsApp" },
+    { value: "Phone Call", label: "Phone Call" },
+    { value: "Email", label: "Email" }
+  ];
+
   const projectOptions = [
     { value: "", label: "Select project type" },
     { value: "Business Website", label: "Business Website" },
@@ -107,151 +136,277 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="h-screen overflow-y-auto srollbar-hide">
+    <div className="h-screen overflow-y-auto scrollbar-hide">
       <Navbar />
-      <main className="bg-white relative text-[#0B1020]">
-        {/* Hero Section */}
-        <section className="pt-8 pb-12 md:pb-16">
+      <main className="bg-gradient-to-b from-white to-[#FAFBFF] relative text-[#0B1020]">
+        
+        {/* Hero Section - Redesigned */}
+        <section className="pt-12 pb-16 md:pt-16 md:pb-20">
           <Container>
             <FadeInUp>
-              <div className="max-w-3xl mx-auto text-center">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.2]">
-                  Tell us what you're trying to build.
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="inline-flex items-center gap-2 bg-[#5B5CF0]/10 rounded-full px-4 py-2 mb-6">
+                  <MessageCircle className="w-4 h-4 text-[#5B5CF0]" />
+                  <span className="text-sm font-medium text-[#5B5CF0]">Let's Connect</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.2] bg-gradient-to-r from-[#0B1020] to-[#5B5CF0] bg-clip-text text-transparent">
+                  Start Your Digital Journey
                 </h1>
-                <p className="mt-4 md:mt-6 text-sm md:text-base text-black/60 leading-relaxed">
-                  No generic forms. No sales calls. Just tell us about your project
-                  and we'll get back to you with honest advice.
+                <p className="mt-6 text-base md:text-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
+                  Share your vision with us. Whether it's a website, app, or complex system, 
+                  we're here to bring your ideas to life.
                 </p>
               </div>
             </FadeInUp>
           </Container>
         </section>
 
-        {/* Contact Form */}
-        <section className="pb-16 md:pb-24">
+        {/* Contact Form - Redesigned with Contact Fields */}
+        <section className="pb-20 md:pb-32">
           <Container>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <FadeIn>
-                <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
-                  {/* Project Type */}
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">
-                      What are you building? *
-                    </label>
-                    <CustomSelect
-                      name="project"
-                      value={formData.project}
-                      onChange={handleChange}
-                      options={projectOptions}
-                      placeholder="Select project type"
-                      required
-                    />
-                  </div>
-
-                  {/* Problem */}
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">
-                      What problem are you trying to solve? *
-                    </label>
-                    <textarea
-                      name="problem"
-                      required
-                      rows={4}
-                      value={formData.problem}
-                      onChange={handleChange}
-                      placeholder="Tell us about your business, the challenges you're facing, and what you hope to achieve..."
-                      className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition resize-none text-sm"
-                    />
-                  </div>
-
-                  {/* Designs */}
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">
-                      Do you already have designs?
-                    </label>
-                    <CustomSelect
-                      name="designs"
-                      value={formData.designs}
-                      onChange={handleChange}
-                      options={designsOptions}
-                      placeholder="Select option"
-                    />
-                  </div>
-
-                  {/* Timeline */}
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">
-                      What timeline are you working with?
-                    </label>
-                    <CustomSelect
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleChange}
-                      options={timelineOptions}
-                      placeholder="Select timeline"
-                    />
-                  </div>
-
-                  {/* Budget */}
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">
-                      What's your estimated budget?
-                    </label>
-                    <CustomSelect
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      options={budgetOptions}
-                      placeholder="Select budget range"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full h-12 md:h-14 rounded-xl bg-[#5B5CF0] text-white text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 md:gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              </FadeIn>
-
-              {/* Alternative Contact */}
-              <div className="mt-10 md:mt-12 pt-8 border-t border-black/5">
-                <div className="grid md:grid-cols-3 gap-5 md:gap-6 text-center">
-                  {/* WhatsApp Contact */}
-                  <div 
-                    onClick={() => window.open('https://wa.me/2348109448643', '_blank')}
-                    className="cursor-pointer group"
-                  >
-                    <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-green-100 transition-colors">
-                      <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.874 3.149.874h.002c3.18 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.766-5.766-5.766zm2.057 7.322c-.113.234-.405.479-.742.686-.262.154-.606.276-.92.317-.274.034-.558.051-.85.051-.414 0-.841-.063-1.226-.189-.264-.082-.512-.197-.735-.341-.171-.11-.329-.23-.473-.357-.079-.072-.125-.11-.125-.11l.014.013c.177.177.312.391.396.63.084.239.128.5.128.775 0 .672-.272 1.313-.717 1.793-.439.474-1.054.781-1.731.864-.18.022-.363.033-.548.033-.492 0-.966-.114-1.395-.335-.361-.186-.684-.445-.957-.764-.334-.389-.549-.858-.622-1.365-.073-.507-.043-1.028.088-1.526.131-.499.335-.966.599-1.387.235-.375.516-.715.834-1.008.184-.169.38-.324.585-.464.198-.135.397-.259.603-.37.205-.111.409-.209.62-.293.212-.084.423-.145.639-.182.215-.037.432-.056.648-.056.157 0 .312.013.465.038.162.026.322.064.476.114.128.042.253.093.373.151.078.038.155.08.231.125.066.039.13.08.193.123l.047.031c.014.01.028.019.041.029.013.01.026.02.038.03l.038.031c.012.01.024.02.036.03.012.01.024.02.035.03l.033.027c.012.01.024.02.035.03.011.01.022.02.033.03.022.02.044.041.065.062.043.041.085.084.125.128.079.089.154.182.224.279.14.193.252.408.332.641.08.233.122.484.122.752 0 .289-.05.583-.149.865z"/>
-                      </svg>
-                    </div>
-                    <p className="text-xs md:text-sm text-black/60 group-hover:text-green-600 transition-colors">
-                      WhatsApp/Call: +234 810 944 8643
+                <div className="bg-white rounded-3xl shadow-xl border border-black/5 overflow-hidden">
+                  <div className="bg-gradient-to-r from-[#5B5CF0] to-[#7B7CF0] px-6 py-8 md:px-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      Tell us about your project
+                    </h2>
+                    <p className="text-white/80 text-sm md:text-base">
+                      Fill out the form below and we'll get back to you within 24 hours
                     </p>
                   </div>
                   
-                  <div>
-                    <Mail className="w-5 h-5 text-[#5B5CF0] mx-auto mb-2" />
-                    <p className="text-xs md:text-sm text-black/60">fusivox@gmail.com</p>
+                  <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
+                    {/* Contact Information Section */}
+                    <div className="bg-[#FAFBFF] rounded-2xl p-6 space-y-5">
+                      <h3 className="text-lg font-bold text-[#0B1020] flex items-center gap-2">
+                        <User className="w-5 h-5 text-[#5B5CF0]" />
+                        Your Contact Information
+                      </h3>
+                      
+                      <div className="grid md:grid-cols-2 gap-5">
+                        {/* Full Name */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            Full Name *
+                          </label>
+                          <div className="relative">
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black/40" />
+                            <input
+                              type="text"
+                              name="name"
+                              required
+                              value={formData.name}
+                              onChange={handleChange}
+                              placeholder="John Doe"
+                              className="w-full pl-10 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Email */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            Email Address *
+                          </label>
+                          <div className="relative">
+                            <AtSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black/40" />
+                            <input
+                              type="email"
+                              name="email"
+                              required
+                              value={formData.email}
+                              onChange={handleChange}
+                              placeholder="john@example.com"
+                              className="w-full pl-10 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Phone Number */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            Phone Number *
+                          </label>
+                          <div className="relative">
+                            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black/40" />
+                            <input
+                              type="tel"
+                              name="phone"
+                              required
+                              value={formData.phone}
+                              onChange={handleChange}
+                              placeholder="+234 810 944 8643"
+                              className="w-full pl-10 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition text-sm"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Preferred Contact Method */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            Preferred Contact Method *
+                          </label>
+                          <div className="relative">
+                            <MessageCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black/40 pointer-events-none" />
+                            <CustomSelect
+                              name="preferredContact"
+                              value={formData.preferredContact}
+                              onChange={handleChange}
+                              options={preferredContactOptions}
+                              placeholder="Select contact method"
+                              required
+                              className="pl-10"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Details Section */}
+                    <div className="space-y-5">
+                      <h3 className="text-lg font-bold text-[#0B1020] flex items-center gap-2">
+                        <Briefcase className="w-5 h-5 text-[#5B5CF0]" />
+                        Project Details
+                      </h3>
+
+                      {/* Project Type */}
+                      <div>
+                        <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                          What are you building? *
+                        </label>
+                        <CustomSelect
+                          name="project"
+                          value={formData.project}
+                          onChange={handleChange}
+                          options={projectOptions}
+                          placeholder="Select project type"
+                          required
+                        />
+                      </div>
+
+                      {/* Problem */}
+                      <div>
+                        <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                          What problem are you trying to solve? *
+                        </label>
+                        <div className="relative">
+                          <AlertCircle className="absolute left-3 top-3 w-4 h-4 text-black/40" />
+                          <textarea
+                            name="problem"
+                            required
+                            rows={4}
+                            value={formData.problem}
+                            onChange={handleChange}
+                            placeholder="Tell us about your business, the challenges you're facing, and what you hope to achieve..."
+                            className="w-full pl-10 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition resize-none text-sm"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-5">
+                        {/* Designs */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            <Palette className="w-4 h-4 inline mr-1" />
+                            Do you have designs?
+                          </label>
+                          <CustomSelect
+                            name="designs"
+                            value={formData.designs}
+                            onChange={handleChange}
+                            options={designsOptions}
+                            placeholder="Select option"
+                          />
+                        </div>
+
+                        {/* Timeline */}
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                            <Clock className="w-4 h-4 inline mr-1" />
+                            Timeline
+                          </label>
+                          <CustomSelect
+                            name="timeline"
+                            value={formData.timeline}
+                            onChange={handleChange}
+                            options={timelineOptions}
+                            placeholder="Select timeline"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Budget */}
+                      <div>
+                        <label className="block text-sm font-semibold mb-2 text-[#0B1020]">
+                          <DollarSign className="w-4 h-4 inline mr-1" />
+                          Estimated Budget
+                        </label>
+                        <CustomSelect
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleChange}
+                          options={budgetOptions}
+                          placeholder="Select budget range"
+                        />
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full h-12 md:h-14 rounded-xl bg-gradient-to-r from-[#5B5CF0] to-[#7B7CF0] text-white text-sm md:text-base font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 md:gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Sending your message...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="w-4 h-4" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </div>
+              </FadeIn>
+
+              {/* Contact Methods - Redesigned */}
+              <div className="mt-12">
+                <div className="grid md:grid-cols-3 gap-6">
+                  {/* WhatsApp */}
+                  <div 
+                    onClick={() => window.open('https://wa.me/2348109448643', '_blank')}
+                    className="bg-white rounded-2xl p-6 border border-black/5 hover:shadow-lg transition-all duration-300 cursor-pointer group text-center"
+                  >
+                    <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-100 transition-colors">
+                      <MessageCircle className="w-7 h-7 text-green-600" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-1">WhatsApp</h3>
+                    <p className="text-sm text-black/60">+234 810 944 8643</p>
+                    <p className="text-xs text-green-600 mt-2 group-hover:underline">Click to chat →</p>
                   </div>
                   
-                  <div>
-                    <MapPin className="w-5 h-5 text-[#5B5CF0] mx-auto mb-2" />
-                    <p className="text-xs md:text-sm text-black/60">Ogun State, Nigeria</p>
+                  {/* Email */}
+                  <div className="bg-white rounded-2xl p-6 border border-black/5 text-center">
+                    <div className="w-14 h-14 bg-[#5B5CF0]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Mail className="w-7 h-7 text-[#5B5CF0]" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-1">Email Us</h3>
+                    <p className="text-sm text-black/60">fusivox@gmail.com</p>
+                    <p className="text-xs text-[#5B5CF0] mt-2">24/7 Support</p>
+                  </div>
+                  
+                  {/* Location */}
+                  <div className="bg-white rounded-2xl p-6 border border-black/5 text-center">
+                    <div className="w-14 h-14 bg-[#5B5CF0]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <MapPin className="w-7 h-7 text-[#5B5CF0]" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-1">Our Location</h3>
+                    <p className="text-sm text-black/60">Ogun State, Nigeria</p>
+                    <p className="text-xs text-[#5B5CF0] mt-2">Remote & On-site</p>
                   </div>
                 </div>
               </div>
@@ -259,14 +414,23 @@ export default function ContactPage() {
           </Container>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-16 md:py-20 bg-[#FAFBFF]">
+        {/* FAQ Section - Enhanced */}
+        <section className="py-20 md:py-28 bg-gradient-to-b from-[#FAFBFF] to-white">
           <Container>
-            <FadeInUp className="text-center mb-8 md:mb-12">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-black">Quick answers</h2>
+            <FadeInUp className="text-center mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#5B5CF0]/10 rounded-full px-4 py-2 mb-4">
+                <CheckCircle className="w-4 h-4 text-[#5B5CF0]" />
+                <span className="text-sm font-medium text-[#5B5CF0]">FAQ</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-[#0B1020] to-[#5B5CF0] bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h2>
+              <p className="mt-4 text-black/60 max-w-2xl mx-auto">
+                Everything you need to know about working with us
+              </p>
             </FadeInUp>
             
-            <div className="max-w-3xl mx-auto space-y-4 md:space-y-6">
+            <div className="max-w-3xl mx-auto space-y-4">
               {[
                 {
                   q: "How long does a typical project take?",
@@ -286,9 +450,9 @@ export default function ContactPage() {
                 }
               ].map((faq, index) => (
                 <FadeIn key={index} delay={index * 0.1}>
-                  <div className="bg-white rounded-xl md:rounded-2xl p-5 md:p-6 border border-black/5">
-                    <h3 className="font-bold text-base md:text-lg mb-1 md:mb-2">{faq.q}</h3>
-                    <p className="text-sm md:text-base text-black/60">{faq.a}</p>
+                  <div className="bg-white rounded-2xl p-6 md:p-7 border border-black/5 hover:shadow-lg transition-shadow">
+                    <h3 className="font-bold text-lg mb-2 text-[#0B1020]">{faq.q}</h3>
+                    <p className="text-black/60 leading-relaxed">{faq.a}</p>
                   </div>
                 </FadeIn>
               ))}
