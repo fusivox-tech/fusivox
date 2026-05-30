@@ -95,7 +95,7 @@ export default function ContactPage() {
 
   // Options for dropdowns with icon mapping
   const preferredContactOptions = [
-    { value: "", label: "Select preferred contact method" },
+    { value: "", label: "Select method" },
     { value: "WhatsApp", label: "WhatsApp" },
     { value: "Phone Call", label: "Phone Call" },
     { value: "Email", label: "Email" }
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   
                   <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
                     {/* Contact Information Section */}
-                    <div className="bg-[#FAFBFF] rounded-2xl p-6 space-y-5">
+                    <div className="pace-y-5">
                       <h3 className="text-lg font-bold text-[#0B1020] flex items-center gap-2">
                         <User className="w-5 h-5 text-[#5B5CF0]" />
                         Your Contact Information
