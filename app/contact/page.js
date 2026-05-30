@@ -295,7 +295,6 @@ export default function ContactPage() {
                           What problem are you trying to solve? *
                         </label>
                         <div className="relative">
-                          <AlertCircle className="absolute left-3 top-3 w-4 h-4 text-black/40" />
                           <textarea
                             name="problem"
                             required
@@ -303,7 +302,7 @@ export default function ContactPage() {
                             value={formData.problem}
                             onChange={handleChange}
                             placeholder="Tell us about your business, the challenges you're facing, and what you hope to achieve..."
-                            className="w-full pl-10 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition resize-none text-sm"
+                            className="w-full pl-4 pr-4 py-3 rounded-xl border border-black/10 focus:border-[#5B5CF0] focus:outline-none transition resize-none text-sm"
                           />
                         </div>
                       </div>
