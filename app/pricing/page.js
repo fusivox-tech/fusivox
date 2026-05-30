@@ -113,7 +113,7 @@ export default function PricingPage() {
               {pricingTiers.map((tier) => (
                 <div
                   key={tier.name}
-                  className={`relative rounded-2xl md:rounded-3xl border p-6 md:p-8 bg-white transition-all duration-300 hover:shadow-xl ${
+                  className={`rounded-2xl md:rounded-3xl border p-6 md:p-8 bg-white transition-all duration-300 hover:shadow-xl ${
                     tier.popular 
                       ? "border-[#5B5CF0] shadow-lg shadow-indigo-500/10" 
                       : "border-black/5"
@@ -151,7 +151,7 @@ export default function PricingPage() {
                   
                   <Link 
                     href="/contact"
-                    className="mt-6 md:mt-8 p-3 px-6 w-full rounded-xl bg-[#0B1020] text-white text-sm md:text-base font-semibold hover:bg-[#1a1f35] transition-colors"
+                    className="mt-12 md:mt-16 p-3 px-6 w-full rounded-xl bg-[#0B1020] text-white text-sm md:text-base font-semibold hover:bg-[#1a1f35] transition-colors"
                   >
                     Get exact quote
                   </Link>
