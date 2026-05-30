@@ -170,7 +170,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Grid - Redesigned */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 pt-10 md:py-28">
           <Container>
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {services.map((service, index) => {
@@ -185,8 +185,8 @@ export default function ServicesPage() {
                         <div className="p-6 md:p-8 flex-1">
                           <div className="flex items-center gap-5">
                           {/* Icon */}
-                          <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                            <Icon className="w-7 h-7 text-white" />
+                          <div className={`w-10 h-10 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mb-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                            <Icon className="w-5 h-5 text-white" />
                           </div>
                           <h2 className="text-2xl font-black mb-2">{service.title}</h2>
                           </div>
