@@ -173,7 +173,7 @@ export default function ContactPage() {
           <Container>
             <div className="max-w-4xl mx-auto">
               <FadeIn>
-                <div className="bg-white rounded-3xl shadow-xl border border-black/5 overflow-hidden">
+                <div className="bg-white rounded-3xl shadow-xl border border-black/5">
                   <div className="bg-gradient-to-r from-[#5B5CF0] to-[#7B7CF0] px-6 py-8 md:px-8">
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       Tell us about your project
