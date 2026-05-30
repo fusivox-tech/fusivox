@@ -53,7 +53,7 @@ const values = [
 
 const stats = [
   { number: "50+", label: "Projects Delivered", icon: Rocket },
-  { number: "98%", label: "Client Satisfaction", icon: Heart },
+  { number: "100%", label: "Client Satisfaction", icon: Heart },
   { number: "24/7", label: "Support Available", icon: Clock },
   { number: "5+", label: "Years Experience", icon: Award }
 ];
