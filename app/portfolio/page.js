@@ -8,6 +8,7 @@ import { FadeInUp, StaggerChildren } from "@/components/ui/ScrollAnimation";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { ArrowRight, ExternalLink, Github, Eye } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -82,7 +83,7 @@ export default function PortfolioPage() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
@@ -261,15 +262,12 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="pt-4 border-t border-black/5">
-                    <button
-                      onClick={() => {
-                        openWhatsApp(`Hi! I'm interested in a project similar to ${selectedProject.title}. Can we discuss?`);
-                        setSelectedProject(null);
-                      }}
+                    <Link
+                      href="/contact"
                       className="w-full py-3 bg-[#0B1020] text-white rounded-xl font-semibold hover:bg-[#1a1f35] transition-colors"
                     >
                       Start a similar project
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -285,18 +283,18 @@ export default function PortfolioPage() {
               <p className="mt-2 md:mt-3 text-sm md:text-base text-black/60">
                 Let's discuss what we can build together. We'd love to help bring your vision to life.
               </p>
-              <button 
-                onClick={() => openWhatsApp("Hi! I have a project idea I'd like to discuss. Can you help?")}
+              <Link 
+                href="/contact"
                 className="mt-5 md:mt-6 h-11 md:h-12 px-6 md:px-8 rounded-xl bg-[#5B5CF0] text-white text-sm md:text-base font-semibold hover:scale-105 transition-transform inline-flex items-center gap-2 md:gap-3"
               >
                 Start a conversation
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </FadeInUp>
           </Container>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

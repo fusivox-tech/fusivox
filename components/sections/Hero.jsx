@@ -4,6 +4,7 @@ import Container from "../ui/Container";
 import { ArrowRight } from 'lucide-react';
 import Typewriter from "../ui/Typewriter";
 import { FadeInUp } from "../ui/ScrollAnimation";
+import Link from "next/link";
 
 const whatsappUrl = (message) => {
   return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
@@ -37,23 +38,21 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap gap-4 mt-10">
-                <button 
-                  onClick={handleWhatsAppClick}
+                <Link 
+                  href="/contact"
                   className="h-14 px-8 rounded-2xl bg-[#5B5CF0] text-white flex items-center gap-5 font-semibold shadow-xl shadow-indigo-500/30 hover:scale-105 transition-transform"
                 >
                   Start a Project
                   <ArrowRight className="w-5 h-5 text-white" />
-                </button>
+                </Link>
 
-                <button 
-                  onClick={() => {
-                    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                <Link 
+                  href="/portfolio"
                   className="h-14 px-8 flex items-center gap-5 rounded-2xl border border-black/10 font-semibold hover:bg-black/[0.03] transition"
                 >
                   See Our Work 
                   <ArrowRight className="w-5 h-5 text-black" />
-                </button>
+                </Link>
               </div>
             </div>
           </FadeInUp>

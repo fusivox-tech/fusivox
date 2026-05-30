@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import { FadeInUp, StaggerChildren, ScaleOnScroll } from "@/components/ui/ScrollAnimation";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { ArrowRight, Check, HelpCircle } from "lucide-react";
+import Link from "next/link";
 
 const pricingTiers = [
   {
@@ -85,7 +86,7 @@ const factors = [
 
 export default function PricingPage() {
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
@@ -148,12 +149,12 @@ export default function PricingPage() {
                     </div>
                   </div>
                   
-                  <button 
-                    onClick={() => openWhatsApp(`Hi! I'm interested in a ${tier.name.toLowerCase()}. Can we discuss details?`)}
+                  <Link 
+                    href="/contact"
                     className="mt-6 md:mt-8 w-full h-10 md:h-12 rounded-xl bg-[#0B1020] text-white text-sm md:text-base font-semibold hover:bg-[#1a1f35] transition-colors"
                   >
                     Get exact quote
-                  </button>
+                  </Link>
                 </div>
               ))}
             </StaggerChildren>
@@ -193,18 +194,18 @@ export default function PricingPage() {
               <p className="mt-2 md:mt-4 text-sm md:text-base text-black/60">
                 We also build custom solutions for unique business needs. Let's talk about what you're trying to achieve.
               </p>
-              <button 
-                onClick={() => openWhatsApp("Hi! I need a custom software solution for my business.")}
+              <Link 
+                href="/contact"
                 className="mt-5 md:mt-8 h-11 md:h-12 px-6 md:px-8 rounded-xl bg-[#5B5CF0] text-white text-sm md:text-base font-semibold hover:scale-105 transition-transform inline-flex items-center gap-2 md:gap-3"
               >
                 Request custom quote
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </FadeInUp>
           </Container>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

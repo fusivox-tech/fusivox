@@ -2,6 +2,7 @@
 
 import Container from "../ui/Container";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const whatsappUrl = (message) => {
   return `https://wa.me/2348109448643?text=${encodeURIComponent(message)}`;
@@ -47,13 +48,13 @@ export default function CTASection() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <button onClick={() => handleWhatsAppClick()} className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
+              <Link href="/contact" className="h-16 px-10 flex items-center gap-5 rounded-2xl bg-white text-[#0F172A] font-black text-lg shadow-2xl hover:scale-[1.02] transition">
                 Start a Project 
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
 
               <p className="text-white/70 text-sm text-center">
-                Usually replies within 6 Hours
+                Usually replies within 1 Hour
               </p>
             </div>
           </div>

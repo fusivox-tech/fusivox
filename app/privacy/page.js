@@ -7,7 +7,7 @@ import { FadeInUp } from "@/components/ui/ScrollAnimation";
 
 export default function PrivacyPage() {
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         <section className="pt-8 md:pt-8 pb-12 md:pb-20">
@@ -80,6 +80,6 @@ export default function PrivacyPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

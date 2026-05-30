@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import { FadeInUp, FadeIn, StaggerChildren } from "@/components/ui/ScrollAnimation";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { ArrowRight, Check, Zap, Shield, Users, Clock } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -72,7 +73,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
@@ -150,18 +151,18 @@ export default function ServicesPage() {
               <p className="mt-3 md:mt-4 text-sm md:text-base text-white/60">
                 Tell us about your project and we'll help you figure out the right approach.
               </p>
-              <button 
-                onClick={() => openWhatsApp("Hi! I need help figuring out what to build for my business.")}
+              <Link 
+                href="/contact"
                 className="mt-6 md:mt-8 h-11 md:h-12 px-6 md:px-8 rounded-xl bg-[#5B5CF0] text-white text-sm md:text-base font-semibold hover:scale-105 transition-transform inline-flex items-center gap-2 md:gap-3"
               >
                 Talk to us
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </FadeInUp>
           </Container>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

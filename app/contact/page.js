@@ -67,7 +67,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
@@ -235,6 +235,6 @@ export default function ContactPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

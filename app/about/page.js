@@ -32,7 +32,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="h-screen overflow-y-auto srollbar-hide">
       <Navbar />
       <main className="bg-white relative text-[#0B1020]">
         {/* Hero Section */}
@@ -166,18 +166,18 @@ export default function AboutPage() {
               <p className="mt-2 md:mt-4 text-sm md:text-base text-white/60">
                 Let's talk about your project and see if we're a good fit.
               </p>
-              <button 
-                onClick={() => openWhatsApp("Hi! I'd like to discuss a potential project with Fusivox.")}
+              <Link 
+                href="/contact"
                 className="mt-5 md:mt-8 h-11 md:h-12 px-6 md:px-8 rounded-xl bg-[#5B5CF0] text-white text-sm md:text-base font-semibold hover:scale-105 transition-transform inline-flex items-center gap-2 md:gap-3"
               >
                 Start a conversation
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </FadeInUp>
           </Container>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

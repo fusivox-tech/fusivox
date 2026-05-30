@@ -11,7 +11,7 @@ import CTASection from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
-    <div className="relative">
+    <div className="h-screen overflow-y-auto srollbar-hide">
     <Navbar />
     <main className="bg-white text-[#0B1020] overflow-hidden">
 
