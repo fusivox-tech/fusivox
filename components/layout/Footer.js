@@ -49,6 +49,7 @@ export default function Footer() {
               <Link href="/about">About</Link>
               <Link href="/portfolio">Portfolio</Link>
               <Link href="/pricing">Pricing</Link>
+              <Link href="/contact">Contact Us</Link>
             </div>
           </div>
 
@@ -57,10 +58,10 @@ export default function Footer() {
               Let’s build something great
             </h3>
 
-            <button onClick={() => handleWhatsAppClick()} className="mt-8 h-12 px-6 flex items-center gap-5 rounded-xl bg-[#5B5CF0] font-semibold">
-              Start a Project
+            <Link href="/contact" className="mt-8 h-12 px-6 flex items-center gap-5 rounded-xl bg-[#5B5CF0] font-semibold">
+              Get A Free Quote
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -189,8 +189,8 @@ export default function Navbar() {
                   transitionDelay: `${links.length * 50}ms`,
                 }}
               >
-                <button
-                  onClick={() => handleWhatsAppClick()}
+                <Link
+                  href="/contact"
                   className={`
                     w-full h-12 px-6 rounded-xl bg-[#0B1020] text-white text-sm
                     flex items-center justify-center gap-5 font-semibold
@@ -202,9 +202,9 @@ export default function Navbar() {
                     transitionDelay: `${links.length * 50 + 50}ms`,
                   }}
                 >
-                  Start a Project
+                  Get A Free Quote
                   <ArrowRight className="h-5 w-5" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
