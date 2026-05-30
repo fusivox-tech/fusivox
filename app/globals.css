@@ -31,3 +31,12 @@ button {
 img, video, iframe {
   content-visibility: auto;
 }
+
+.scrollbar-hide::-webkit-scrollbar-width {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
