@@ -146,10 +146,7 @@ export default function ServicesPage() {
       <main className="bg-white relative text-[#0B1020]">
         
         {/* Hero Section - Redesigned */}
-        <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 opacity-50" />
-          <div className="absolute top-20 right-20 w-72 h-72 bg-[#5B5CF0] rounded-full filter blur-3xl opacity-10" />
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl opacity-10" />
+        <section className="relative pt-12 pb-12 md:pt-12 md:pb-20 overflow-hidden">
           
           <Container>
             <FadeInUp>
