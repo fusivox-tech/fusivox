@@ -185,10 +185,10 @@ export default function ContactPage() {
                   
                   <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
                     {/* Contact Information Section */}
-                    <div className="pace-y-5">
+                    <div className="space-y-5">
                       <h3 className="text-lg font-bold text-[#0B1020] flex items-center gap-2">
                         <User className="w-5 h-5 text-[#5B5CF0]" />
-                        Your Contact Information
+                        Contact Information
                       </h3>
                       
                       <div className="grid md:grid-cols-2 gap-5">
