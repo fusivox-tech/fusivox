@@ -64,8 +64,7 @@ const pricingTiers = [
     icon: Globe,
     gradient: "from-blue-500 to-indigo-500",
     bgGradient: "from-blue-50 to-indigo-50",
-    color: "blue",
-    popular: true
+    color: "blue"
   },
   {
     name: "Full-Stack Web Apps",
@@ -135,10 +134,7 @@ export default function PricingPage() {
       <main className="bg-white relative text-[#0B1020]">
         
         {/* Hero Section - Redesigned */}
-        <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 opacity-50" />
-          <div className="absolute top-20 right-20 w-72 h-72 bg-[#5B5CF0] rounded-full filter blur-3xl opacity-10" />
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-purple-500 rounded-full filter blur-3xl opacity-10" />
+        <section className="relative py-12 overflow-hidden">
           
           <Container>
             <FadeInUp>
@@ -205,10 +201,6 @@ export default function PricingPage() {
                     <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
                     <div className={`relative bg-white border-2 ${tier.popular ? 'border-[#5B5CF0]' : 'border-black/5'} rounded-2xl p-6 h-full flex flex-col`}>
-                      {/* Icon Header */}
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${tier.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
                       
                       <h3 className="text-xl font-black mb-2">{tier.name}</h3>
                       
@@ -301,59 +293,6 @@ export default function PricingPage() {
                 </div>
               </div>
             </ScaleOnScroll>
-          </Container>
-        </section>
-
-        {/* Comparison Table - New */}
-        <section className="py-20 md:py-28">
-          <Container>
-            <FadeInUp className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-[#5B5CF0]/10 rounded-full px-4 py-2 mb-4">
-                <Rocket className="w-4 h-4 text-[#5B5CF0]" />
-                <span className="text-sm font-medium text-[#5B5CF0]">Compare Plans</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-black">Choose the right fit</h2>
-            </FadeInUp>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full max-w-4xl mx-auto">
-                <thead>
-                  <tr className="border-b-2 border-black/10">
-                    <th className="text-left p-4 font-bold">Feature</th>
-                    {pricingTiers.map(tier => (
-                      <th key={tier.name} className="text-center p-4 font-bold">
-                        {tier.name}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    "Custom design",
-                    "Mobile responsive",
-                    "Database integration",
-                    "User authentication",
-                    "Payment integration",
-                    "Admin dashboard",
-                    "API development",
-                    "Post-launch support"
-                  ].map((feature, idx) => (
-                    <tr key={feature} className="border-b border-black/5">
-                      <td className="p-4 text-sm font-medium">{feature}</td>
-                      {pricingTiers.map(tier => (
-                        <td key={tier.name} className="text-center p-4">
-                          {tier.includes.some(item => item.toLowerCase().includes(feature.toLowerCase())) ? (
-                            <Check className="w-4 h-4 text-[#5B5CF0] mx-auto" />
-                          ) : (
-                            <span className="text-black/30">—</span>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
           </Container>
         </section>
 

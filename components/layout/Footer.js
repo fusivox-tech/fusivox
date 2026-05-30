@@ -58,7 +58,7 @@ export default function Footer() {
               Let’s build something great
             </h3>
 
-            <Link href="/contact" className="mt-8 h-12 px-6 flex items-center gap-5 rounded-xl bg-[#5B5CF0] font-semibold">
+            <Link href="/contact" className="mt-8 h-12 px-6 flex items-center gap-5 justify-center flex items-center rounded-xl bg-[#5B5CF0] font-semibold">
               Get A Free Quote
               <ArrowRight className="w-5 h-5" />
             </Link>

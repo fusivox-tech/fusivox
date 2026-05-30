@@ -65,11 +65,7 @@ export default function AboutPage() {
       <main className="bg-white relative text-[#0B1020]">
         
         {/* Hero Section - Redesigned */}
-        <section className="relative pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 opacity-50" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#5B5CF0] rounded-full filter blur-3xl opacity-10 animate-pulse" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse" />
+        <section className="relative py-12 overflow-hidden">
           
           <Container>
             <FadeInUp>
@@ -190,7 +186,7 @@ export default function AboutPage() {
                   <div key={value.title} className="group relative">
                     <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl blur-xl" />
                     <div className="relative bg-white rounded-2xl p-6 border border-black/5 hover:border-[#5B5CF0]/20 transition-all duration-300 hover:shadow-xl text-center h-full">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${value.color} flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-lg font-bold mt-4 mb-2">{value.title}</h3>
@@ -293,8 +289,8 @@ export default function AboutPage() {
                     They don't just write code — they solve real business problems.
                   </p>
                   <div className="mt-6">
-                    <div className="font-bold text-[#0B1020]">Michael Adebayo</div>
-                    <div className="text-sm text-black/60">CEO, TechStart Nigeria</div>
+                    <div className="font-bold text-[#0B1020]">Michael Adebisi</div>
+                    <div className="text-sm text-black/60">Founder, Salvy Footwears</div>
                   </div>
                 </div>
               </FadeInUp>

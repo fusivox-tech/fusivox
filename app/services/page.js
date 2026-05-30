@@ -146,7 +146,7 @@ export default function ServicesPage() {
       <main className="bg-white relative text-[#0B1020]">
         
         {/* Hero Section - Redesigned */}
-        <section className="relative pt-12 pb-12 md:pt-12 md:pb-20 overflow-hidden">
+        <section className="relative pt-12 pb-12 md:pt-12 md:pb-12 overflow-hidden">
           
           <Container>
             <FadeInUp>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] bg-gradient-to-r from-[#0B1020] to-[#5B5CF0] bg-clip-text text-transparent">
                   Software should make business easier,
-                  <span className="block">not more complicated.</span>
+                  <span className="">not more complicated.</span>
                 </h1>
                 <p className="mt-6 text-base md:text-lg text-black/60 leading-relaxed max-w-2xl">
                   At Fusivox, we build digital products that actually solve problems. 
@@ -181,16 +181,16 @@ export default function ServicesPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-[#5B5CF0] to-purple-600 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl -z-10" />
                       
                       <div className="relative bg-white rounded-2xl border border-black/5 hover:border-[#5B5CF0]/20 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col overflow-hidden">
-                        {/* Header Gradient */}
-                        <div className={`h-2 bg-gradient-to-r ${service.gradient}`} />
                         
                         <div className="p-6 md:p-8 flex-1">
+                          <div className="flex items-center gap-5">
                           {/* Icon */}
-                          <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-7 h-7 text-white" />
                           </div>
-                          
                           <h2 className="text-2xl font-black mb-2">{service.title}</h2>
+                          </div>
+                          
                           <p className="text-sm text-black/70 mb-3">{service.subtitle}</p>
                           <p className="text-sm text-black/60 leading-relaxed mb-6">{service.description}</p>
                           
