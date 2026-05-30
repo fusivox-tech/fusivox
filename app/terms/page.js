@@ -115,6 +115,7 @@ export default function TermsPage() {
           </Container>
         </section>
       </main>
+      
       <Footer />
     </div>
   );
