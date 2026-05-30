@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import { FadeInUp, FadeIn, StaggerChildren } from "@/components/ui/ScrollAnimation";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { ArrowRight, Code, Shield, MessageCircle, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 const values = [
   {
