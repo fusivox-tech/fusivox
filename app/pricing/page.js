@@ -178,7 +178,7 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Cards - Redesigned */}
-        <section className="py-20 md:py-28">
+        <section className="py-10">
           <Container>
             <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {pricingTiers.map((tier) => {
@@ -226,17 +226,12 @@ export default function PricingPage() {
                           What's included:
                         </p>
                         <div className="space-y-2">
-                          {tier.includes.slice(0, 5).map((item) => (
+                          {tier.includes.map((item) => (
                             <div key={item} className="flex items-center gap-2 text-xs text-black/70">
                               <Check className="w-3 h-3 text-[#5B5CF0] shrink-0" />
                               {item}
                             </div>
                           ))}
-                          {tier.includes.length > 5 && (
-                            <div className="text-xs text-[#5B5CF0] font-medium pl-5">
-                              +{tier.includes.length - 5} more features
-                            </div>
-                          )}
                         </div>
                       </div>
                       
@@ -259,7 +254,7 @@ export default function PricingPage() {
         </section>
 
         {/* What Affects Pricing - Redesigned */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-[#FAFBFF] to-white">
+        <section className="py-10 bg-gradient-to-br from-[#FAFBFF] to-white">
           <Container>
             <ScaleOnScroll>
               <div className="max-w-4xl mx-auto">
@@ -297,7 +292,7 @@ export default function PricingPage() {
         </section>
 
         {/* Custom Quote Section - Redesigned */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-[#0B1020] to-[#1a1f35] relative overflow-hidden">
+        <section className="py-10 bg-gradient-to-br from-[#0B1020] to-[#1a1f35] relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#5B5CF0]/20 to-purple-500/20" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#5B5CF0] rounded-full filter blur-3xl opacity-20" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20" />
@@ -330,31 +325,6 @@ export default function PricingPage() {
                 </Link>
               </div>
             </FadeInUp>
-          </Container>
-        </section>
-
-        {/* FAQ Teaser - New */}
-        <section className="py-16 md:py-20 bg-white">
-          <Container>
-            <div className="max-w-3xl mx-auto text-center">
-              <FadeInUp>
-                <div className="inline-flex items-center gap-2 bg-[#5B5CF0]/10 rounded-full px-4 py-2 mb-6">
-                  <HelpCircle className="w-4 h-4 text-[#5B5CF0]" />
-                  <span className="text-sm font-medium text-[#5B5CF0]">Questions?</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Still have questions about pricing?</h3>
-                <p className="text-black/60 mb-6">
-                  We're here to help you understand what's best for your project
-                </p>
-                <Link 
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-[#5B5CF0] font-semibold hover:gap-3 transition-all"
-                >
-                  Contact us for a detailed breakdown
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </FadeInUp>
-            </div>
           </Container>
         </section>
       </main>

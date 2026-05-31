@@ -156,8 +156,7 @@ export default function ServicesPage() {
                   <span className="text-sm font-medium text-[#5B5CF0]">Our Services</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] bg-gradient-to-r from-[#0B1020] to-[#5B5CF0] bg-clip-text text-transparent">
-                  Software should make business easier,
-                  <span className="">not more complicated.</span>
+                  Software should make business easier, not more complicated.
                 </h1>
                 <p className="mt-6 text-base md:text-lg text-black/60 leading-relaxed max-w-2xl">
                   At Fusivox, we build digital products that actually solve problems. 
@@ -170,7 +169,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Grid - Redesigned */}
-        <section className="py-20 pt-10 md:py-28">
+        <section className="py-6">
           <Container>
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {services.map((service, index) => {
@@ -229,16 +228,13 @@ export default function ServicesPage() {
                               WHAT'S INCLUDED
                             </p>
                             <div className="grid grid-cols-2 gap-2">
-                              {service.solutions.slice(0, 4).map((solution) => (
+                              {service.solutions.map((solution) => (
                                 <div key={solution} className="flex items-center gap-2">
                                   <Check className="w-3 h-3 text-[#5B5CF0] shrink-0" />
                                   <span className="text-xs text-black/70">{solution}</span>
                                 </div>
                               ))}
                             </div>
-                            {service.solutions.length > 4 && (
-                              <p className="text-xs text-[#5B5CF0] mt-2">+{service.solutions.length - 4} more features</p>
-                            )}
                           </div>
                           
                           <Link 
@@ -259,7 +255,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Process Section - New */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-[#FAFBFF] to-white">
+        <section className="py-10 bg-gradient-to-br from-[#FAFBFF] to-white">
           <Container>
             <FadeInUp className="text-center mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 bg-[#5B5CF0]/10 rounded-full px-4 py-2 mb-4">
@@ -286,7 +282,7 @@ export default function ServicesPage() {
                           <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#5B5CF0]/10 to-[#7B7CF0]/10 flex items-center justify-center">
                             <Icon className="w-5 h-5 text-[#5B5CF0]" />
                           </div>
-                          <div className="text-2xl font-bold text-black/5">0{index + 1}</div>
+                          <div className="text-2xl font-bold text-black/10">0{index + 1}</div>
                         </div>
                         <h3 className="text-lg font-bold mb-2">{step.step}</h3>
                         <p className="text-sm text-black/60">{step.description}</p>
@@ -300,7 +296,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Choose Us Section - New */}
-        <section className="py-20 md:py-28">
+        <section className="py-10">
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <FadeIn>
