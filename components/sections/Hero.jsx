@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 md:gap-0 items-center">
           <FadeInUp>
             <div>
-              <h1 className="text-4xl h-[150px] lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
+              <h1 className="text-4xl h-[120px] lg:text-5xl font-black leading-[1.02] tracking-tight max-w-xl">
                 We build softwares that businesses can{" "}
                 <Typewriter 
                   texts={["actually grow with.", "scale high with.", "truly trust.", "truly love."]}
