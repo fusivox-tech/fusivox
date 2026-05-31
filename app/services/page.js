@@ -317,7 +317,7 @@ export default function ServicesPage() {
                     {[
                       "10+ years combined experience",
                       "50+ successful projects delivered",
-                      "98% client satisfaction rate",
+                      "100% client satisfaction rate",
                       "24/7 dedicated support"
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-3">
@@ -338,7 +338,7 @@ export default function ServicesPage() {
                         <Award className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
-                        <div className="text-2xl font-black">98%</div>
+                        <div className="text-2xl font-black">100%</div>
                         <div className="text-xs text-black/60">Client Satisfaction</div>
                       </div>
                     </div>
@@ -347,8 +347,8 @@ export default function ServicesPage() {
                       The team was professional, communicative, and delivered beyond our expectations."
                     </blockquote>
                     <div className="mt-4 pt-4 border-t border-black/5">
-                      <div className="font-semibold">Michael Adebayo</div>
-                      <div className="text-xs text-black/60">CEO, TechStart Nigeria</div>
+                      <div className="font-semibold">Michael Adebisi</div>
+                      <div className="text-xs text-black/60">Founder, Salvy Footwears</div>
                     </div>
                   </div>
                 </div>
