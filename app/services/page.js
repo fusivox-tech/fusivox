@@ -146,7 +146,7 @@ export default function ServicesPage() {
       <main className="bg-white relative text-[#0B1020]">
         
         {/* Hero Section - Redesigned */}
-        <section className="relative pt-12 pb-12 md:pt-12 md:pb-12 overflow-hidden">
+        <section className="relative pt-12 pb-6 overflow-hidden">
           
           <Container>
             <FadeInUp>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Grid - Redesigned */}
-        <section className="py-6">
+        <section className="py-6 pt-2">
           <Container>
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {services.map((service, index) => {
